@@ -1,7 +1,6 @@
 Multiple Control Options
 ========================
 
-（此处会插入一段功能展示视频）
 
 *This kit integrates multiple interaction methods, enabling automatic control via sensors, remote monitoring and operation via a mobile app, and voice control. These diverse interaction modes make learning and experiencing smart homes more intuitive, convenient, and enriching.*
 
@@ -10,11 +9,17 @@ Multiple Control Options
 Automatic Control
 -----------------
 
- - When the raindrop sensor detects rain, the servo automatically closes the windows.
- - When the brightness sensor detects a darkening environment and the presence sensor detects a person passing by, the LED automatically illuminates.
- - When the DHT11 temperature and humidity sensor detects excessive temperature, the fan automatically turns on to cool the door.
- - When a button press is detected, the RGB ambient lighting mode switches to different modes, creating a variety of lighting effects.
- - In automatic mode, placing an ID card near the RFID sensor triggers the servo to open the door.
+ - When the DHT11  sensor detects an increase in temperature, the fan will automatically turn on.
+ - The light sensor detects a decrease in brightness, and the RGB lights will automatically turn on white lights for supplementary lighting.
+ - When the brightness sensor detects a decrease in brightness and the human body sensor detects someone passing by, the buzzer will automatically sound an alarm.
+
+----
+
+Infrared remote control
+-----------------------
+ - The OK button can turn on the fan, water pump, and RGB lights with one click, while the 0 button can turn them off with one click.
+ - Press button 1 to turn on the fan, press button 2 to turn on the RGB light, press button 3 to turn on the water pump, press button 4 to turn on the alarm mode, press button 6 to turn on the RGB light supplement, and press buttons 7, 8, and 9 to switch between three RGB light effects.
+ - Press the left button to enter the temperature threshold setting of the temperature controlled fan. Set it by pressing the up and down buttons, and adjust it by 0.5 degrees Celsius each time. Press the left button again to confirm the setting.
 
 ----
 
@@ -138,12 +143,8 @@ Speech Recognition control
 This kit supports voice recognition, allowing users to directly control LED lights, fans, doors and windows, and adjust the volume through voice commands.  
 
 - Before using voice control, you need to wake up the device.The wake-up phrase is: **"Hi Lumi."** When the device responds, **"Hi, I am Lumi, how can I help you?"** , it has successfully woken up.You can now use the following voice commands to control the device：
-- Open the door
-- Close the door
-- Turn on the light
-- Turn off the light
-- Open the window
-- Close the window
+- Turn on the water pump
+- Shut down the water pump
 - Turn on the fan
 - Turn off the fan
 - Turn on the ambient light
