@@ -10,7 +10,8 @@ Introduction
 
 ----
 
-*This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. The system supports three interaction methods: manual operation, voice recognition, and remote control via a mobile app. Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.*
+*This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. The system supports three interaction methods: manual operation, voice recognition, and remote control via a mobile app. Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.
+
 ----
 
 Bill of Materials
@@ -153,7 +154,7 @@ Function Display
  - Infrared Remote Control: Turns the water pump on/off, controls the fan, switches RGB lighting effects, deactivates the burglar alarm, and sets the temperature-controlled fan threshold.
 
  - Mobile App Control: Turns the water pump on/off, controls the fan, sets RGB light colors, and displays temperature, humidity, water level, and brightness.
- 
+
  - Voice Control: Turns the water pump on/off, controls the fan, and controls the RGB lights.
 
 ----
