@@ -1,7 +1,7 @@
 Introduction
 ============
 
-**Welcome to ESP32-IOT-SmartHome-kit**
+**Welcome to ESP32-IOT-SmartFarm-kit**
 
 .. image:: _static/1.SmartHome.png
    :alt: Completed LA-Smart-Home Kit
@@ -10,14 +10,13 @@ Introduction
 
 ----
 
-*This smart home development kit, built around the ESP32-DevKit development board, utilizes 2.54 standard interface components for connectivity. Users can control home devices manually, through voice recognition, or through a mobile app, enabling a variety of smart home functions, including door and window openings, light adjustment, RGB ambient lighting, and fan control. Through programming and app-based remote control, users can experience the joy of IoT control and understand the collaborative working principles of sensors and actuators.*
-
+*This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. The system supports three interaction methods: manual operation, voice recognition, and remote control via a mobile app. Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.*
 ----
 
 Bill of Materials
 -----------------
 
-The following table lists all components included in the **ESP32-IOT-SmartHome-kit**. Please check carefully to ensure that all parts are complete before starting.  
+The following table lists all components included in the **ESP32-IOT-SmartFarm-kit**. Please check carefully to ensure that all parts are complete before starting.  
 
 .. list-table::
    :header-rows: 1
@@ -55,22 +54,22 @@ The following table lists all components included in the **ESP32-IOT-SmartHome-k
    * - .. image:: _static/bom/6.rain.png
         :width: 100
         :align: center
-     - Raindrop Sensor
+     - Water Sensor
      - 1 pcs
    * - .. image:: _static/bom/7.light.png
         :width: 100
         :align: center
      - Light Sensor
      - 1 pcs
-   * - .. image:: _static/bom/8.led.png
+   * - .. image:: _static/bom/8.buzzer.png
         :width: 100
         :align: center
-     - LED Module
+     - Active Buzzer Module
      - 1 pcs
-   * - .. image:: _static/bom/9.button.png
+   * - .. image:: _static/bom/9.IR.png
         :width: 100
         :align: center
-     - Button Module
+     - IR Receiver Module
      - 1 pcs
    * - .. image:: _static/bom/10.fan.png
         :width: 100
@@ -92,16 +91,6 @@ The following table lists all components included in the **ESP32-IOT-SmartHome-k
         :align: center
      - LCD1602 Display
      - 1 pcs
-   * - .. image:: _static/bom/14.rfid2.png
-        :width: 200
-        :align: center
-     - RFID Module + IC Card
-     - 1 set
-   * - .. image:: _static/bom/15.servo.png
-        :width: 200
-        :align: center
-     - SG90 Servo
-     - 2 pcs
    * - .. image:: _static/bom/21.tyn.png
         :width: 200
         :align: center
@@ -116,12 +105,12 @@ The following table lists all components included in the **ESP32-IOT-SmartHome-k
         :width: 200
         :align: center
      - 3P Cable
-     - 9 pcs
+     - 8 pcs
    * - .. image:: _static/bom/18.4p.png
         :width: 200
         :align: center
      - 4P Cable
-     - 4 pcs
+     - 3 pcs
    * - .. image:: _static/bom/26.basswood.png
         :width: 100
         :align: center
@@ -132,16 +121,6 @@ The following table lists all components included in the **ESP32-IOT-SmartHome-k
         :align: center
      - Painted Basswood
      - 1 pcs
-   * - .. image:: _static/bom/24.acrylic.png
-        :width: 100
-        :align: center
-     - Acrylic Sheet
-     - 1 pcs
-   * - .. image:: _static/bom/19.Gasket.png
-        :width: 80
-        :align: center
-     - Gasket
-     - 12 pcs
    * - .. image:: _static/bom/20.Screwdriver.png
         :width: 200
         :align: center
@@ -169,23 +148,13 @@ The following table lists all components included in the **ESP32-IOT-SmartHome-k
 Function Display
 ----------------
 
- - DHT11: Real-time temperature and humidity monitoring
+ - Automatic Control: Temperature-controlled fan, automatic nighttime lighting, nighttime burglar alarm, monitors temperature, humidity, water level, and brightness, displaying information on the LCD screen.
 
- - Light sensor and rain sensor: Automatic light and window control
+ - Infrared Remote Control: Turns the water pump on/off, controls the fan, switches RGB lighting effects, deactivates the burglar alarm, and sets the temperature-controlled fan threshold.
 
- - PIR motion sensor: Human detection and scene triggering
-
- - RFID card swipe module: Door unlocking with a card swipe
-
- - SPEECH recognition module: Voice control of lights, fans, and RGB light strips
-
- - LCD1602 display: Real-time display of sensor data and system status
-
- - RGB light strip: Colorful lighting effects
-
- - Servo: Simulate door and window switches
-
- - LED and Fan: Lighting and temperature control
+ - Mobile App Control: Turns the water pump on/off, controls the fan, sets RGB light colors, and displays temperature, humidity, water level, and brightness.
+ 
+ - Voice Control: Turns the water pump on/off, controls the fan, and controls the RGB lights.
 
 ----
 
