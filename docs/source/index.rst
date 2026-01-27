@@ -2,7 +2,7 @@ ESP32 IOT SmartHome Kit
 =======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 📘 Quick Start Guide
 
    1.Introduction
