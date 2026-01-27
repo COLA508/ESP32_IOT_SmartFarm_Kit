@@ -1,6 +1,6 @@
 # -- Project information -----------------------------------------------------
 project = 'ESP32 IOT SmartFarm Kit'
-copyright = '2025, Lafvin'
+copyright = '2026, Lafvin'
 author = 'Lafvin'
 
 # -- General configuration ---------------------------------------------------
