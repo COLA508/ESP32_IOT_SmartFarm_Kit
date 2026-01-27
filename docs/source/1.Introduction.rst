@@ -99,6 +99,11 @@ The following table lists all components included in the **ESP32-IOT-SmartFarm-k
    * - .. image:: _static/bom/21.tyn.png
         :width: 200
         :align: center
+     - Water Pump
+     - 1 pcs
+   * - .. image:: _static/bom/21.tyn.png
+        :width: 200
+        :align: center
      - Solar module
      - 1 pcs
    * - .. image:: _static/bom/16.typec.png
@@ -116,6 +121,11 @@ The following table lists all components included in the **ESP32-IOT-SmartFarm-k
         :align: center
      - 4P Cable
      - 3 pcs
+     - Water Tank
+     - 1 pcs
+   * - .. image:: _static/bom/21.tyn.png
+        :width: 200
+        :align: center
    * - .. image:: _static/bom/26.basswood.png
         :width: 100
         :align: center
@@ -150,43 +160,44 @@ The following table lists all components included in the **ESP32-IOT-SmartFarm-k
 
 ----
 
-Function Display
-----------------
+Function Introduction
+---------------------
 
- - Automatic Control: Temperature-controlled fan, automatic nighttime lighting, nighttime burglar alarm, monitors temperature, humidity, water level, and brightness, displaying information on the LCD screen.
+**Automatic Control Mode:**
 
- - Infrared Remote Control: Turns the water pump on/off, controls the fan, switches RGB lighting effects, deactivates the burglar alarm, and sets the temperature-controlled fan threshold.
+Ambient Light Sensor: Automatically turns on white supplemental lighting when light levels are below a threshold, simulating nighttime lighting for plants;
 
- - Mobile App Control: Turns the water pump on/off, controls the fan, sets RGB light colors, and displays temperature, humidity, water level, and brightness.
+Intelligent Security Linkage: Automatically triggers a buzzer alarm when human activity is detected under low light conditions, providing nighttime anti-theft functionality;
 
- - Voice Control: Turns the water pump on/off, controls the fan, and controls the RGB lights.
+Temperature-Controlled Ventilation: Automatically starts and stops fans according to preset temperature thresholds, achieving intelligent adjustment of ambient temperature;
 
-----
+Environmental Monitoring and Display: Real-time collection of temperature, humidity, light, and water level data, dynamically updated and displayed on the LCD1602 screen.
 
-Video Tutorial
---------------
+**Infrared Remote Control:**
 
- - ESP32 IoT Smart Home Kit Tutorial Arduino IDE
+One-button global control of fans, water pumps, and RGB lights is possible via remote control buttons. Independent on/off operation of each device is also supported, flexibly adapting to different scenario needs; Switching between three RGB lighting effects, enabling/disabling alarm modes, and setting thresholds for temperature-controlled fans.
 
-.. raw:: html
+**Voice Recognition Control:**
 
-   <iframe width="650" height="400" src="https://www.youtube.com/embed/_VVL8HGnhiI" title="ESP32 IoT Smart Home Kit Tutorial  Arduino IDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-----
+Supports direct control of fans, water pumps, and RGB lights via specific voice commands, achieving a hands-free intelligent interactive experience.
 
- - ESP32 IoT Smart Home Kit Tutorial ESP Flash Tool
+**APP Control:**
 
-.. raw:: html
-
-   <iframe width="650" height="400" src="https://www.youtube.com/embed/syFF3LSzR9M" title="ESP32 IoT Smart Home Kit Tutorial   ESP Flash Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Real-time monitoring and display of environmental data such as temperature, humidity, light intensity, water level, and human presence; Supports remote control of RGB lights, with independent adjustment of red, green, and blue brightness; Remotely starts and stops fans and water pumps, enabling comprehensive mobile management of farm equipment.
 
 ----
 
-- The two videos above respectively demonstrate the complete process of uploading code using the Arduino IDE and flashing firmware using Espressif's official flashing tool.
+Resource Download
+-----------------
 
-- The video content includes: a tutorial on assembling the house structure, function demonstrations, Arduino IDE usage instructions, firmware flashing operations, and Wi-Fi configuration steps.
+All the necessary code and library files for this course are provided. You can obtain all the resources through the following link.
 
-- By watching the videos, you can quickly get started and experience all the functions of this kit.
+`Code and Libraries <https://www.dropbox.com/scl/fo/sl9z0sjm05r91bp1ydpow/ADg7koIZM07COmi8Y_GyPWE?rlkey=odmym388yz5bqwd5xhbzzn2zi&st=4w7j8l23&dl=1>`_
 
-- For more detailed operating steps and explanations of principles, please refer to the subsequent text and image tutorial section.
+`Flash Download Tool <https://www.dropbox.com/scl/fo/r81afjixw65y88jikwxno/AM8XTGDtfcEJDgN0jHyMbRY?rlkey=4lvaoh0axd9nhvk9al7qukoi5&st=1hqtehms&dl=1>`_
+
+`CH340 <https://www.dropbox.com/scl/fo/c4bb59fr42qcs9cxgexan/AIMImtqevecMqYNMJVK1ZBM?rlkey=9afntuwy2usxfxbl7xjkoirsy&st=89a5bx6b&dl=1>`_
 
 ----
+
+
