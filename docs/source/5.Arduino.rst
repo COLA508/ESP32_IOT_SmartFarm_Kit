@@ -1,188 +1,305 @@
-Introduction
-============
+Arduino IDE User Guide
+======================
 
-**Welcome to ESP32-IOT-SmartFarm-kit**
+Arduino IDE is a simple and easy-to-use open-source development environment that supports a variety of microcontrollers, including the ESP32. Here, you can unleash your creativity and write your own programs.
 
-.. image:: _static/1.SmartHome.png
-   :alt: Completed LA-Smart-Home Kit
+1. Install Arduino IDE
+----------------------
+
+A. Click here to visit the `Arduino IDE <https://www.arduino.cc/en/software/>`_ website and download the installation package suitable for your computer version. This example will demonstrate using Windows.
+
+.. image:: _static/arduino/1.install.png
+   :width: 1000
+   :align: center
+
+----
+B. Run the installer by double-clicking the downloaded ``arduino-ide_xxxx.exe`` file.  
+
+C. Read and accept the **License Agreement**.  
+
+.. image:: _static/arduino/2.install.png
    :width: 800
    :align: center
 
 ----
 
-*This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. The system supports three interaction methods: manual operation, voice recognition, and remote control via a mobile app. Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.*
+D. Select the desired installation options.
 
-----
-
-Bill of Materials
------------------
-
-The following table lists all components included in the **ESP32-IOT-SmartFarm-kit**. Please check carefully to ensure that all parts are complete before starting.  
-
-.. list-table::
-   :header-rows: 1
-   :widths: 30 40 20
+.. image:: _static/arduino/3.install.png
+   :width: 800
    :align: center
 
-   * - PIC
-     - Item
-     - Quantity
-   * - .. image:: _static/bom/1.esp32.png
-        :width: 200
-        :align: center
-     - ESP32 DevKit
-     - 1 pcs
-   * - .. image:: _static/bom/2.esp32expboard.png
-        :width: 200
-        :align: center
-     - ESP32 Expansion Board
-     - 1 pcs
-   * - .. image:: _static/bom/3.battery.png
-        :width: 200
-        :align: center
-     - Battery Box
-     - 1 pcs
-   * - .. image:: _static/bom/4.dht11.png
-        :width: 100
-        :align: center
-     - DHT11 Sensor
-     - 1 pcs
-   * - .. image:: _static/bom/5.pir.png
-        :width: 100
-        :align: center
-     - PIR Sensor
-     - 1 pcs
-   * - .. image:: _static/bom/6.rain.png
-        :width: 100
-        :align: center
-     - Water Sensor
-     - 1 pcs
-   * - .. image:: _static/bom/7.light.png
-        :width: 100
-        :align: center
-     - Light Sensor
-     - 1 pcs
-   * - .. image:: _static/bom/8.buzzer.png
-        :width: 100
-        :align: center
-     - Active Buzzer Module
-     - 1 pcs
-   * - .. image:: _static/bom/9.IR.png
-        :width: 100
-        :align: center
-     - IR Receiver Module
-     - 1 pcs
-   * - .. image:: _static/bom/10.fan.png
-        :width: 100
-        :align: center
-     - Motor Fan Module
-     - 1 pcs
-   * - .. image:: _static/bom/11.speech.png
-        :width: 100
-        :align: center
-     - Speech Recognition Module
-     - 1 pcs
-   * - .. image:: _static/bom/12.rgb1.png
-        :width: 400
-        :align: center
-     - RGB Light Strip
-     - 1 pcs
-   * - .. image:: _static/bom/13.lcd.png
-        :width: 200
-        :align: center
-     - LCD1602 Display
-     - 1 pcs
-   * - .. image:: _static/bom/21.tyn.png
-        :width: 200
-        :align: center
-     - Solar module
-     - 1 pcs
-   * - .. image:: _static/bom/16.typec.png
-        :width: 200
-        :align: center
-     - Type-C Data Cable
-     - 1 pcs
-   * - .. image:: _static/bom/17.3p.png
-        :width: 200
-        :align: center
-     - 3P Cable
-     - 8 pcs
-   * - .. image:: _static/bom/18.4p.png
-        :width: 200
-        :align: center
-     - 4P Cable
-     - 3 pcs
-   * - .. image:: _static/bom/26.basswood.png
-        :width: 100
-        :align: center
-     - Basswood Board
-     - 6 pcs
-   * - .. image:: _static/bom/22.caiban.png
-        :width: 100
-        :align: center
-     - Painted Basswood
-     - 1 pcs
-   * - .. image:: _static/bom/20.Screwdriver.png
-        :width: 200
-        :align: center
-     - Phillips Screwdriver
-     - 1 pcs
-   * - .. image:: _static/bom/21.sleeve.png
-        :width: 200
-        :align: center
-     - Sleeve
-     - 5 pcs
-   * - .. image:: _static/bom/23.screwbag.png
-        :width: 300
-        :align: center
-     - Screw Bag
-     - 3 bags
-   * - .. image:: _static/bom/25.glue.png
-        :width: 200
-        :align: center
-     - Glue
-     - 5 pcs
+----
 
+E. Choose the installation path. It is recommended to install the software on a non-system drive.
+
+.. image:: _static/arduino/4.install.png
+   :width: 800
+   :align: center
 
 ----
 
-Function Display
+F. Click Install and wait for the process to complete. Finally, click Finish.
+
+.. image:: _static/arduino/5.install.png
+   :width: 800
+   :align: center
+
+----
+
+2. Add ESP32 Board Manager
+--------------------------
+
+A. Open the Arduino IDE, click **File** → **Preferences** in the upper left corner, and copy and paste the following address into the Additional Board Manager URLs input box.
+
+.. image:: _static/arduino/6.esp.png
+   :width: 800
+   :align: center
+----
+
+B. After entering the URL, click OK. **https://espressif.github.io/arduino-esp32/package_esp32_index.json**
+
+.. image:: _static/arduino/7.esp.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+.. image:: _static/arduino/8.esp.png
+   :width: 800
+   :align: center
+----
+
+C. After completing this step, close and reopen the Arduino IDE.
+
+----
+
+3. Download  ESP32 Core Package
+----------------------------
+
+A. Click on the **BOARDS MANAGER** icon on the right and search for **"ESP32"**.
+
+.. image:: _static/arduino/19.esp.png
+   :width: 800
+   :align: center
+
+----
+
+B. Find the core package named **esp32 by Espressif systems**, select version **2.0.12**, and click the **install** button to install it.
+
+.. image:: _static/arduino/20.esp.png
+   :width: 800
+   :align: center
+----
+
+C. You can view the download progress in the OUTLOOK window.
+
+.. image:: _static/arduino/21.esp.png
+   :width: 1000
+   :align: center
+
+----
+
+D. The prompt for successful installation indicates that the ESP32 core package has been successfully installed.
+
+.. image:: _static/arduino/22.esp.png
+   :width: 1000
+   :align: center
+
+----
+
+.. note::
+   - It is recommended to install the core package version 2.0.12 for this package. Using other versions may cause program or functional abnormalities
+   - During the download process of the core package, it may fail due to network failures. You can try several more times.
+
+----
+
+4. Add Libraries
 ----------------
 
- - Automatic Control: Temperature-controlled fan, automatic nighttime lighting, nighttime burglar alarm, monitors temperature, humidity, water level, and brightness, displaying information on the LCD screen.
+Arduino libraries can significantly simplify the development process.
 
- - Infrared Remote Control: Turns the water pump on/off, controls the fan, switches RGB lighting effects, deactivates the burglar alarm, and sets the temperature-controlled fan threshold.
+They encapsulate commonly used functions and hardware driver code, allowing users to simply call ready-made functions without writing complex low-level code from scratch.
 
- - Mobile App Control: Turns the water pump on/off, controls the fan, sets RGB light colors, and displays temperature, humidity, water level, and brightness.
+A wealth of community-provided third-party libraries also allows for quick integration with various sensors and modules.
 
- - Voice Control: Turns the water pump on/off, controls the fan, and controls the RGB lights.
+These library functions make it easy to interact with hardware and expand Arduino’s functionality.
+
+A. We've compiled all the libraries necessary to run this suite. Please click the link below to download them and follow the instructions to complete the installation:  `Download libraries <https://www.dropbox.com/scl/fo/syf1zstu58f4xlcld2nss/ACJOi93PcIafo5yGabrprDA?rlkey=hoc2undykymrxac7z8nclpk9u&st=el86zaw9&dl=1>`_
 
 ----
 
-Video Tutorial
---------------
+B. Unzip the downloaded library file. The library file storage path is **Code and Libraries** → **Libraries** . Open it and confirm that it contains the library file shown in the figure below.
 
- - ESP32 IoT Smart Home Kit Tutorial Arduino IDE
+- Adafruit_NeoPixel.zip
+- FastLED.zip
+
+.. image:: _static/arduino/23.lib.png
+   :width: 1000
+   :align: center
 
 .. raw:: html
 
-   <iframe width="650" height="400" src="https://www.youtube.com/embed/_VVL8HGnhiI" title="ESP32 IoT Smart Home Kit Tutorial  Arduino IDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <div style="margin-top: 30px;"></div>
+
+**Both of these library files need to be imported.**
+
 ----
 
- - ESP32 IoT Smart Home Kit Tutorial ESP Flash Tool
+C. Open the Arduino IDE and click **Sketch** → **Include Library** → **Add .ZIP Library**.
+
+.. image:: _static/arduino/9.lib.png
+   :width: 800
+   :align: center
+
+----
+
+D. In the pop-up window, locate the folder of the library you just downloaded and unzipped, select it, and click Open to complete the import.
+
+.. image:: _static/arduino/10.lib.png
+   :width: 800
+   :align: center
+
+----
+
+E. If the library file is imported successfully, the Arduino IDE output window will display the message: **Library installed**.
+
+.. image:: _static/arduino/11.lib.png
+   :width: 800
+   :align: center
+
+----
+
+.. note::
+
+   - The Arduino IDE does not support importing multiple libraries at once; you must import one library at a time, and all library files included in the resources must be imported.
+   - If a library file already exists, a prompt will appear asking whether to overwrite it. It is recommended to confirm overwrite to avoid program errors caused by different library versions.
+
+.. image:: _static/arduino/12.lib.png
+   :width: 800
+   :align: center
+
+----
+
+F. Download Libraries Using Arduino IDE
+
+You can also download required libraries directly using the Arduino IDE.
+
+ - On the right side of the Arduino IDE interface, click the Library Manager icon.
+
+ - Enter keywords in the search box to find the required library and click Install to download.
+
+.. image:: _static/arduino/13.lib.png
+   :width: 800
+   :align: center
+
+----
+
+5. Install Serial Port Tool
+---------------------------
+
+ - After connecting the ESP32 to the computer, a USB-to-serial driver needs to be installed to establish communication. For detailed installation steps, please click here. :ref:`Install Serial Port Tool`
+
+ - If you have already successfully installed the driver, you can skip this step.
+----
+
+6. Upload Test Code
+-------------------
+
+ - To verify that the Arduino IDE is configured correctly and the ESP32 development board is working properly, please use the following code to test the onboard LED connected to GPIO pin 2.
+
+.. code-block:: cpp
+
+ const int ledPin = 2; // PIN for on-board LED
+
+ // PWM Configuration
+ const int freq = 5000;      // PWM frequency (Hz)
+ const int ledChannel = 0;   // Use PWM channel 0 (0-15)
+ const int resolution = 8;   // 8-bit resolution (0-255)
+
+ void setup() {
+  // Configure PWM channel parameters
+  ledcSetup(ledChannel, freq, resolution);
+  
+  // Attach PWM channel to LED pin
+  ledcAttachPin(ledPin, ledChannel);
+  
+  // Initialize serial communication for debugging
+  Serial.begin(115200);
+  Serial.println("ESP32 Breathing LED Program Started!");
+ }
+
+ void loop() {
+  // Breathing effect: brightness gradually increases (fade in)
+  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
+    ledcWrite(ledChannel, dutyCycle); // Set PWM duty cycle
+    delay(5); // Controls speed (larger value = slower breathing)
+  }
+  
+  // Breathing effect: brightness gradually decreases (fade out)
+  for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
+    ledcWrite(ledChannel, dutyCycle); // Set PWM duty cycle
+    delay(5); // Controls speed (larger value = slower breathing)
+  }
+  
+  // Optional pause between each breathing cycle
+  delay(100);
+}
+
+----
+
+A. Copy the code above into the Arduino IDE.
+
+B. As shown in the image below, search for and select the corresponding development board and serial port.
+
+.. image:: _static/arduino/14.code.png
+   :width: 800
+   :align: center
 
 .. raw:: html
 
-   <iframe width="650" height="400" src="https://www.youtube.com/embed/syFF3LSzR9M" title="ESP32 IoT Smart Home Kit Tutorial   ESP Flash Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   <div style="margin-top: 30px;"></div>
+
+.. image:: _static/arduino/15.code.png
+   :width: 800
+   :align: center
 
 ----
 
-- The two videos above respectively demonstrate the complete process of uploading code using the Arduino IDE and flashing firmware using Espressif's official flashing tool.
+C. Click the **upload** button to upload the code to the development board.
 
-- The video content includes: a tutorial on assembling the house structure, function demonstrations, Arduino IDE usage instructions, firmware flashing operations, and Wi-Fi configuration steps.
+.. image:: _static/arduino/16.code.png
+   :width: 800
+   :align: center
 
-- By watching the videos, you can quickly get started and experience all the functions of this kit.
+----
 
-- For more detailed operating steps and explanations of principles, please refer to the subsequent text and image tutorial section.
+D. After clicking upload, the upload progress will be displayed in the output window.
+
+.. image:: _static/arduino/17.code.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+E. Once the output display shows that the upload is complete, press the RST button on the ESP32 development board to start the program.
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+   
+F. After pressing the RST key, you can see the onboard LEDs of the ESP32 development board flashing, proving that the Arduino IDE configuration and the development board are working properly.
+
+.. image:: _static/arduino/18.code.png
+   :width: 800
+   :align: center
+
+----
+
+**Congratulations! Your Arduino IDE is ready! Now you can start writing your first program!**
 
 ----
