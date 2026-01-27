@@ -32,132 +32,131 @@ The following table lists all components included in the **ESP32-IOT-SmartFarm-k
      - Item
      - Quantity
    * - .. image:: _static/bom/1.esp32.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - ESP32 DevKit
      - 1 pcs
    * - .. image:: _static/bom/2.esp32expboard.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - ESP32 Expansion Board
      - 1 pcs
    * - .. image:: _static/bom/3.battery.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Battery Box
      - 1 pcs
    * - .. image:: _static/bom/4.dht11.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - DHT11 Sensor
      - 1 pcs
    * - .. image:: _static/bom/5.pir.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - PIR Sensor
      - 1 pcs
    * - .. image:: _static/bom/6.rain.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Water Sensor
      - 1 pcs
    * - .. image:: _static/bom/7.light.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Light Sensor
      - 1 pcs
    * - .. image:: _static/bom/8.buzzer.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Active Buzzer Module
      - 1 pcs
    * - .. image:: _static/bom/9.IR.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - IR Receiver Module
      - 1 pcs
    * - .. image:: _static/bom/10.fan.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Motor Fan Module
      - 1 pcs
    * - .. image:: _static/bom/11.speech.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Speech Recognition Module
      - 1 pcs
    * - .. image:: _static/bom/12.rgb1.png
-        :width: 400
-        :align: center
+          :width: 400
+          :align: center
      - RGB Light Strip
      - 1 pcs
    * - .. image:: _static/bom/13.lcd.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - LCD1602 Display
      - 1 pcs
    * - .. image:: _static/bom/21.tyn.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Water Pump
      - 1 pcs
    * - .. image:: _static/bom/21.tyn.png
-        :width: 200
-        :align: center
-     - Solar module
+          :width: 200
+          :align: center
+     - Solar Module
      - 1 pcs
    * - .. image:: _static/bom/16.typec.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Type-C Data Cable
      - 1 pcs
    * - .. image:: _static/bom/17.3p.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - 3P Cable
      - 8 pcs
    * - .. image:: _static/bom/18.4p.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - 4P Cable
      - 3 pcs
+   * - .. image:: _static/bom/24.watertank.png
+          :width: 200
+          :align: center
      - Water Tank
      - 1 pcs
-   * - .. image:: _static/bom/21.tyn.png
-        :width: 200
-        :align: center
    * - .. image:: _static/bom/26.basswood.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Basswood Board
      - 6 pcs
    * - .. image:: _static/bom/22.caiban.png
-        :width: 100
-        :align: center
+          :width: 100
+          :align: center
      - Painted Basswood
      - 1 pcs
    * - .. image:: _static/bom/20.Screwdriver.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Phillips Screwdriver
      - 1 pcs
    * - .. image:: _static/bom/21.sleeve.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Sleeve
      - 5 pcs
    * - .. image:: _static/bom/23.screwbag.png
-        :width: 300
-        :align: center
+          :width: 300
+          :align: center
      - Screw Bag
      - 3 bags
    * - .. image:: _static/bom/25.glue.png
-        :width: 200
-        :align: center
+          :width: 200
+          :align: center
      - Glue
      - 5 pcs
-
-
+     
 ----
 
 Function Introduction
@@ -165,17 +164,21 @@ Function Introduction
 
 **Automatic Control Mode:**
 
-Ambient Light Sensor: Automatically turns on white supplemental lighting when light levels are below a threshold, simulating nighttime lighting for plants;
+Ambient Light Sensor: Automatically turns on white supplemental lighting when light levels are below a threshold, simulating nighttime lighting for plants.
 
-Intelligent Security Linkage: Automatically triggers a buzzer alarm when human activity is detected under low light conditions, providing nighttime anti-theft functionality;
+Intelligent Security Linkage: Automatically triggers a buzzer alarm when human activity is detected under low light conditions, providing nighttime anti-theft functionality.
 
-Temperature-Controlled Ventilation: Automatically starts and stops fans according to preset temperature thresholds, achieving intelligent adjustment of ambient temperature;
+Temperature-Controlled Ventilation: Automatically starts and stops fans according to preset temperature thresholds, achieving intelligent adjustment of ambient temperature.
 
 Environmental Monitoring and Display: Real-time collection of temperature, humidity, light, and water level data, dynamically updated and displayed on the LCD1602 screen.
 
 **Infrared Remote Control:**
 
-One-button global control of fans, water pumps, and RGB lights is possible via remote control buttons. Independent on/off operation of each device is also supported, flexibly adapting to different scenario needs; Switching between three RGB lighting effects, enabling/disabling alarm modes, and setting thresholds for temperature-controlled fans.
+One-button global control of fans, water pumps, and RGB lights is possible via remote control buttons.
+
+Independent on/off operation of each device is also supported, flexibly adapting to different scenario needs.
+
+Switching between three RGB lighting effects, enabling/disabling alarm modes, and setting thresholds for temperature-controlled fans.
 
 **Voice Recognition Control:**
 
@@ -183,7 +186,11 @@ Supports direct control of fans, water pumps, and RGB lights via specific voice 
 
 **APP Control:**
 
-Real-time monitoring and display of environmental data such as temperature, humidity, light intensity, water level, and human presence; Supports remote control of RGB lights, with independent adjustment of red, green, and blue brightness; Remotely starts and stops fans and water pumps, enabling comprehensive mobile management of farm equipment.
+Real-time monitoring and display of environmental data such as temperature, humidity, light intensity, water level, and human presence.
+
+Supports remote control of RGB lights, with independent adjustment of red, green, and blue brightness.
+
+Remotely starts and stops fans and water pumps, enabling comprehensive mobile management of farm equipment.
 
 ----
 
