@@ -1,0 +1,188 @@
+Introduction
+============
+
+**Welcome to ESP32-IOT-SmartFarm-kit**
+
+.. image:: _static/1.SmartHome.png
+   :alt: Completed LA-Smart-Home Kit
+   :width: 800
+   :align: center
+
+----
+
+*This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. The system supports three interaction methods: manual operation, voice recognition, and remote control via a mobile app. Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.*
+
+----
+
+Bill of Materials
+-----------------
+
+The following table lists all components included in the **ESP32-IOT-SmartFarm-kit**. Please check carefully to ensure that all parts are complete before starting.  
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 40 20
+   :align: center
+
+   * - PIC
+     - Item
+     - Quantity
+   * - .. image:: _static/bom/1.esp32.png
+        :width: 200
+        :align: center
+     - ESP32 DevKit
+     - 1 pcs
+   * - .. image:: _static/bom/2.esp32expboard.png
+        :width: 200
+        :align: center
+     - ESP32 Expansion Board
+     - 1 pcs
+   * - .. image:: _static/bom/3.battery.png
+        :width: 200
+        :align: center
+     - Battery Box
+     - 1 pcs
+   * - .. image:: _static/bom/4.dht11.png
+        :width: 100
+        :align: center
+     - DHT11 Sensor
+     - 1 pcs
+   * - .. image:: _static/bom/5.pir.png
+        :width: 100
+        :align: center
+     - PIR Sensor
+     - 1 pcs
+   * - .. image:: _static/bom/6.rain.png
+        :width: 100
+        :align: center
+     - Water Sensor
+     - 1 pcs
+   * - .. image:: _static/bom/7.light.png
+        :width: 100
+        :align: center
+     - Light Sensor
+     - 1 pcs
+   * - .. image:: _static/bom/8.buzzer.png
+        :width: 100
+        :align: center
+     - Active Buzzer Module
+     - 1 pcs
+   * - .. image:: _static/bom/9.IR.png
+        :width: 100
+        :align: center
+     - IR Receiver Module
+     - 1 pcs
+   * - .. image:: _static/bom/10.fan.png
+        :width: 100
+        :align: center
+     - Motor Fan Module
+     - 1 pcs
+   * - .. image:: _static/bom/11.speech.png
+        :width: 100
+        :align: center
+     - Speech Recognition Module
+     - 1 pcs
+   * - .. image:: _static/bom/12.rgb1.png
+        :width: 400
+        :align: center
+     - RGB Light Strip
+     - 1 pcs
+   * - .. image:: _static/bom/13.lcd.png
+        :width: 200
+        :align: center
+     - LCD1602 Display
+     - 1 pcs
+   * - .. image:: _static/bom/21.tyn.png
+        :width: 200
+        :align: center
+     - Solar module
+     - 1 pcs
+   * - .. image:: _static/bom/16.typec.png
+        :width: 200
+        :align: center
+     - Type-C Data Cable
+     - 1 pcs
+   * - .. image:: _static/bom/17.3p.png
+        :width: 200
+        :align: center
+     - 3P Cable
+     - 8 pcs
+   * - .. image:: _static/bom/18.4p.png
+        :width: 200
+        :align: center
+     - 4P Cable
+     - 3 pcs
+   * - .. image:: _static/bom/26.basswood.png
+        :width: 100
+        :align: center
+     - Basswood Board
+     - 6 pcs
+   * - .. image:: _static/bom/22.caiban.png
+        :width: 100
+        :align: center
+     - Painted Basswood
+     - 1 pcs
+   * - .. image:: _static/bom/20.Screwdriver.png
+        :width: 200
+        :align: center
+     - Phillips Screwdriver
+     - 1 pcs
+   * - .. image:: _static/bom/21.sleeve.png
+        :width: 200
+        :align: center
+     - Sleeve
+     - 5 pcs
+   * - .. image:: _static/bom/23.screwbag.png
+        :width: 300
+        :align: center
+     - Screw Bag
+     - 3 bags
+   * - .. image:: _static/bom/25.glue.png
+        :width: 200
+        :align: center
+     - Glue
+     - 5 pcs
+
+
+----
+
+Function Display
+----------------
+
+ - Automatic Control: Temperature-controlled fan, automatic nighttime lighting, nighttime burglar alarm, monitors temperature, humidity, water level, and brightness, displaying information on the LCD screen.
+
+ - Infrared Remote Control: Turns the water pump on/off, controls the fan, switches RGB lighting effects, deactivates the burglar alarm, and sets the temperature-controlled fan threshold.
+
+ - Mobile App Control: Turns the water pump on/off, controls the fan, sets RGB light colors, and displays temperature, humidity, water level, and brightness.
+
+ - Voice Control: Turns the water pump on/off, controls the fan, and controls the RGB lights.
+
+----
+
+Video Tutorial
+--------------
+
+ - ESP32 IoT Smart Home Kit Tutorial Arduino IDE
+
+.. raw:: html
+
+   <iframe width="650" height="400" src="https://www.youtube.com/embed/_VVL8HGnhiI" title="ESP32 IoT Smart Home Kit Tutorial  Arduino IDE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+----
+
+ - ESP32 IoT Smart Home Kit Tutorial ESP Flash Tool
+
+.. raw:: html
+
+   <iframe width="650" height="400" src="https://www.youtube.com/embed/syFF3LSzR9M" title="ESP32 IoT Smart Home Kit Tutorial   ESP Flash Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+----
+
+- The two videos above respectively demonstrate the complete process of uploading code using the Arduino IDE and flashing firmware using Espressif's official flashing tool.
+
+- The video content includes: a tutorial on assembling the house structure, function demonstrations, Arduino IDE usage instructions, firmware flashing operations, and Wi-Fi configuration steps.
+
+- By watching the videos, you can quickly get started and experience all the functions of this kit.
+
+- For more detailed operating steps and explanations of principles, please refer to the subsequent text and image tutorial section.
+
+----
