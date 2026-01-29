@@ -142,7 +142,7 @@ App control
 .. note::
    
    **Troubleshooting Device Connectivity Issues**
-
+   
  1. Place the device as close as possible to your Wi-Fi router to ensure a stable network connection.
 
  2. Ensure your mobile phone is connected to the same Wi-Fi network as the ESP32 device. This is essential for communication.
@@ -152,7 +152,7 @@ App control
  4. Briefly press the RST button to restart the device and observe the screen transition from Wi-Fi name to IP address.
 
  5. You can try re-flashing the complete firmware to the ESP32 development board to rule out program errors.
- 
+
 ----
 
 3. APP Interface Operation Guide

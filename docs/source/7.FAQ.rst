@@ -3,7 +3,8 @@ Frequently Asked Questions
 
 *1.Smart home features are not responding.*
  - Please use six AA batteries for power. Check that the battery charge is sufficient and ensure the battery voltage is above 7.5V.
- - Please check that the wiring is correct. The ESP32 development board does not come pre-installed with smart home software. You will need to upload the appropriate software to enable these features.
+ - Please check that the wiring is correct. The ESP32 development board does not come pre-installed with smart Smart_Farm software. You will need to upload the appropriate software to enable these features.
+
 ----
 
 *2.The development board is not recognized or the program cannot be burned.*
@@ -44,14 +45,20 @@ Frequently Asked Questions
 
 ----
 
-*7.The servo is not moving or is trembling.*
- - Confirm that the power supply is stable and the servo voltage should be 5V.
- - Avoid sharing USB power for multiple servos; use separate battery packs or external power supplies.
- - Check that the signal cables are correctly connected to the corresponding GPIOs （e.g., GPIO4 for window servos and GPIO13 for door servos）.
+*7.The water pump cannot start.*
+ - Confirm that the power supply is stable and the water pump voltage should be 5V.
+ - Confirm that the COM and GND pins of the relay module are shorted using jumper caps.
+ - You can gently tap the relay module to engage its internal contacts, thus enabling it to be energized.
+
+----
+*8.The water pump is unable to draw water or the waterwheel cannot rotate.*
+ - When installing water pipes, avoid bending them, as this will prevent water from flowing out; they should be installed in an arc shape.
+ - A gap should be maintained between the positioning ring of the waterwheel and the waterwheel wheel; otherwise, the waterwheel wheel will jam and cannot rotate.
+ - The installation position of the water pipes needs to be adjusted multiple times according to the water flow rate to ensure smooth rotation of the waterwheel.
 
 ----
 
-*8.If the sensor detects abnormal data, please check the following*
+*.If the sensor detects abnormal data, please check the following*
  - Confirm that the sensor's wiring port matches the pin number defined in the code.
  - Ensure that the sensor surface is free of dust, stains, or foreign objects. Keep it clean to ensure accurate detection.
 
@@ -65,16 +72,8 @@ Frequently Asked Questions
 
 *10.Is the voice recognition module not recognizing your voice?*
  - Please make sure the voice recognition module is connected correctly.
- - The baud rate should be set to 115200.
  - Please use it in a quiet environment and ensure that it is within 0.5 meters of the microphone.
- - This module only supports fixed commands, such as "Light on," "Light off," "Fan on," and "Fan off."
+ - This module only supports fixed commands, such as "Ambient Light on," "Ambient Light off," "Fan on," and "Fan off."
  - Other unregistered voice commands will be invalid.
 
 ----
-
-*11.The app cannot connect to the ESP32 development board/cannot be controlled using the app.*
- - If you are using the Arduino IDE to program:Please confirm that you have changed the WiFi name and password in the code to your own network information.
- - If you are using Espressif's official programming tool:Please confirm that you have correctly configured the WiFi according to the network configuration tutorial.
- - If you still cannot connect:It is recommended to power cycle the device and then try connecting again.
-
-*If you encounter other problems or cannot solve them yourself, please contact the after-sales technical support team and we will provide you with assistance in a timely manner.*
