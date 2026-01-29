@@ -1,5 +1,5 @@
-SmartFarm Functionality User Guide
-==================================
+SmartFarm Function User Guide
+=============================
 
 
 **This kit integrates multiple interaction methods, enabling automatic control via sensors, remote monitoring and operation via a mobile app, and voice control. **
@@ -46,3 +46,18 @@ This kit supports voice recognition, allowing users to directly control LED ligh
    - The system only recognizes the following preset commands. Voice content outside the range will not take effect.
 
 ----
+
+App control
+-----------
+
+1. APP Download 
+
+- For Android system, click the link below to download the installation package, or scan the QR code below to download.
+- iOS devices can download the app from the App Store. Search for “LAFVIN” to find and install it, or scan the QR code below to jump to the download page.
+
+----
+
+2. Network configuration
+
+
+
