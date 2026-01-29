@@ -135,10 +135,14 @@ A. We've compiled all the libraries necessary to run this suite. Please click th
 
 B. Unzip the downloaded library file. The library file storage path is **Code and Libraries** → **Libraries** . Open it and confirm that it contains the library file shown in the figure below.
 
-- Adafruit_NeoPixel.zip
-- FastLED.zip
+- Adafruit_LiquidCrystal
+- Adafruit_NeoPixel
+- ArduinoJson
+- DHT_sensor_library
+- hd44780
+- IRremote
 
-.. image:: _static/arduino/23.lib.png
+.. image:: _static/arduino/23.lib1.png
    :width: 1000
    :align: center
 
