@@ -50,7 +50,8 @@ This kit supports voice recognition, allowing users to directly control LED ligh
 App control
 -----------
 
-1. APP Download 
+1. APP Download
+~~~~~~~~~~~~~~~
 
 - For Android system, click the link below to download the installation package, or scan the QR code below to download.
 - iOS devices can download the app from the App Store. Search for “LAFVIN” to find and install it, or scan the QR code below to jump to the download page.
@@ -58,6 +59,7 @@ App control
 ----
 
 2. Network configuration
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Before using the app to control it, the ESP32 development board must be connected to a Wi-Fi network. This is a necessary condition for enabling communication between the mobile phone and the development board.
 
@@ -137,9 +139,24 @@ App control
 
 2.8：Once the connection is successful, a notification will pop up on the screen, and you can then use the app to operate it.
 
+.. note::
+   
+   **Troubleshooting Device Connectivity Issues**
+
+ 1. Place the device as close as possible to your Wi-Fi router to ensure a stable network connection.
+
+ 2. Ensure your mobile phone is connected to the same Wi-Fi network as the ESP32 device. This is essential for communication.
+
+ 3. Confirm the ESP32 development board is powered on and the LCD1602 screen displays the local IP address.
+
+ 4. Briefly press the RST button to restart the device and observe the screen transition from Wi-Fi name to IP address.
+
+ 5. You can try re-flashing the complete firmware to the ESP32 development board to rule out program errors.
+ 
 ----
 
 3. APP Interface Operation Guide
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The APP interface is shown in the image below.
 
