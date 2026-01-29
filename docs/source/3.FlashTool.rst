@@ -127,8 +127,3 @@ Unzip "Flash Download Tool". The folder contains the following files. Double-cli
    - If flashing still fails, restart the computer and development board and try again.
 
 ----
-
-.. _Electronic Piano User Guide:
-
-4. SmartFarm User Guide
-------------------------
