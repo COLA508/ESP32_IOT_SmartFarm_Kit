@@ -51,12 +51,14 @@ Frequently Asked Questions
  - You can gently tap the relay module to engage its internal contacts, thus enabling it to be energized.
 
 ----
+
 *8.The water pump is unable to draw water or the waterwheel cannot rotate.*
  - When installing water pipes, avoid bending them, as this will prevent water from flowing out; they should be installed in an arc shape.
  - A gap should be maintained between the positioning ring of the waterwheel and the waterwheel wheel; otherwise, the waterwheel wheel will jam and cannot rotate.
  - The installation position of the water pipes needs to be adjusted multiple times according to the water flow rate to ensure smooth rotation of the waterwheel.
 
 ----
+
 *9.If the sensor detects abnormal data, please check the following*
  - Confirm that the sensor's wiring port matches the pin number defined in the code.
  - Ensure that the sensor surface is free of dust, stains, or foreign objects. Keep it clean to ensure accurate detection.
