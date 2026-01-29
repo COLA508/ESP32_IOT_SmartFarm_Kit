@@ -57,7 +57,9 @@ A. Open the Arduino IDE, click **File** → **Preferences** in the upper left co
    :align: center
 ----
 
-B. After entering the URL, click OK. **https://espressif.github.io/arduino-esp32/package_esp32_index.json**
+B. After entering the URL, click OK.
+
+ **https://espressif.github.io/arduino-esp32/package_esp32_index.json**
 
 .. image:: _static/arduino/7.esp.png
    :width: 800
