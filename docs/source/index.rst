@@ -1,4 +1,4 @@
-ESP32 IOT SmartHome Kit
+ESP32 IOT SmartFarm Kit
 =======================
 
 .. toctree::
