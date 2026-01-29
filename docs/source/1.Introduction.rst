@@ -10,11 +10,11 @@ Introduction
 
 ----
 
- - This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. 
+- This smart farm development kit uses a high-performance ESP32 development board as its core control unit and employs modular components with standard 2.54mm pitch interfaces for easy connection and expansion. 
 
- - The system supports three interaction methods: infrared remote control, voice control, and control via an app.Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. 
+- The system supports three interaction methods: infrared remote control, voice control, and control via an app.Users can easily manage various farm equipment, such as water pumps, lighting, and fan operation. 
 
- - By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.
+- By learning Arduino programming and remote real-time operation via the mobile app, users can not only experience the intelligent control benefits of IoT technology firsthand but also gain a deeper understanding of the complete collaborative working mechanism of sensor perception, data communication, and actuator linkage, thereby mastering the core principles and application methods of IoT systems.
 
 ----
 
