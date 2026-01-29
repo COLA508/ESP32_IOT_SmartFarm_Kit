@@ -1,7 +1,7 @@
 Burning Program
 ================
 
-**The ESP 32 development board in this kit is not pre installed at the factory, so there will be no response after power on.** 
+**The ESP32 development board in this kit is not pre installed at the factory, so there will be no response after power on.** 
 
 **Please burn the program for the development board according to the following tutorial to quickly experience all the functions of the suite.**
 
