@@ -1,8 +1,73 @@
 Smart Farm Assembly
 ==================
 
+Assembly Video
+--------------
+
+Wiring
+------
+
+.. image:: _static/Assembly/1.WIRING.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+.. list-table::
+   :header-rows: 1
+   :widths: 50 20
+   :align: center
+
+   * - Component
+     - ESP32 Pin
+   * - Relay Module
+     - 23
+   * - Active Buzzer
+     - 13
+   * - Fan
+     - 27
+   * - PIR Sensor
+     - 33
+   * - LED
+     - 26
+   * - Light Sensor
+     - 34
+   * - Infrared Receiver Module
+     - 32
+   * - DHT11 Sensor
+     - 15
+   * - Water Level Sensor
+     - 35
+   * - Speech Recognition
+     - 16, 17
+   * - LCD1602
+     - I2C-SCL, SDA
+   * - RGB Light Strip
+     - 12
+    
+----
+
 1. Base Assembly
 ----------------
+
+Step 1: Install ESP32
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Step 1-1: Mounting screws**
+
+- **Parts list：** Basswood board with “A”、 M3*6mm screw （8 PCS）、 M3*10mm copper pillar（4 PCS）.
+
+.. image:: _static/Assembly/2.esp32screw.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+----
 
 2. House Assembly
 ------------------
