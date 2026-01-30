@@ -1,4 +1,4 @@
-Burning Program
+Burn The Program
 ================
 
 **The ESP32 development board in this kit is not pre installed at the factory, so there will be no response after power on.** 
