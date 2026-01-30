@@ -75,6 +75,17 @@ Step 1: Install ESP32
 
 ----
 
+Step 2: Install battery box
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** battery box 、M3*10mm screw （2 PCS）、M3 Nut（2 PCS）
+
+.. image:: _static/Assembly/4.battary.png
+   :width: 800
+   :align: center
+
+----
+
 2. House Assembly
 ------------------
 
