@@ -59,7 +59,7 @@ Step 1: Install ESP32
 
 - **Parts list：** Basswood board with “A”、 M3*6mm screw （8 PCS）、 M3*10mm copper pillar（4 PCS）.
 
-.. image:: _static/Assembly/2.esp32screw.png
+.. image:: _static/Assembly/2.esp32screw1.png
    :width: 800
    :align: center
 
