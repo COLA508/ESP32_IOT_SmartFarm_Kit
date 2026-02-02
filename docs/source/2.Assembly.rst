@@ -63,6 +63,10 @@ Step 1: Install ESP32
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+    The serial numbers on the basswood boards are used only to distinguish one board from another. In the tutorial examples, the serial numbers face outward for ease of illustration, but they should face inward during installation. This principle should also be followed for subsequent basswood installations.
+
 ----
 
 **Step 1-2: Fixed ESP32**
