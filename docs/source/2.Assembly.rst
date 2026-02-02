@@ -65,7 +65,7 @@ Step 1: Install ESP32
 
 .. admonition:: Precautions
 
-    The serial numbers on the basswood boards are used only to distinguish one board from another. In the tutorial examples, the serial numbers face outward for ease of illustration, but they should face inward during installation. This principle should also be followed for subsequent basswood installations.
+  - The serial numbers on the basswood boards are used only to distinguish one board from another. In the tutorial examples, the serial numbers face outward for ease of illustration, but they should face inward during installation. This principle should also be followed for subsequent basswood installations.
 
 ----
 
@@ -87,6 +87,10 @@ Step 2: Install battery box
 .. image:: _static/Assembly/4.battary.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+  - When securing the battery compartment, use flat-head screws. If you use round-head screws, the screws will protrude and press against the battery, preventing it from being installed properly.
 
 ----
 
