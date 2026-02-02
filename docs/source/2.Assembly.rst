@@ -224,9 +224,28 @@ Step 4：Install Roof
 
 ----
 
+Installation rendering of the base section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----
+
 3. Waterwheel Assembly
 ----------------------
 
+Step 1：Install Water Wheel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Waterwheel（2 PCS）、Waterwheel baffle（10 PCS）
+
+.. image:: _static/Assembly/16.water1.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/16.water2.png
+   :width: 800
+   :align: center
+
+----
 
 4. Decorative assembly
 -----------------------
