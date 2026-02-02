@@ -149,7 +149,7 @@ Step 7：Install Cover Plate
 
 ----
 
-Installation rendering of the base section
+Design sketch of base part after assembly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -224,8 +224,8 @@ Step 4：Install Roof
 
 ----
 
-Installation rendering of the base section
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Rendering of the partially assembled house
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ----
 
@@ -287,13 +287,27 @@ Step 4：Install WaterWheel
 Step 5：Install water level sensor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：**  Basswood boards with “N”、 Water Level Sensor、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+- **Parts list：**  Basswood boards with “N”、Extended pad（3 PCS）、Water Level Sensor、M3*17mm screw （2 PCS）、M3 Nut（2 PCS）.
 
-.. image:: _static/Assembly/16.water2.png
+.. image:: _static/Assembly/20.waterlevel.png
    :width: 800
    :align: center
 
+.. image:: _static/Assembly/20.waterlevel1.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/20.waterlevel2.png
+   :width: 800
+   :align: center
+   
 ----
+
+Rendering of the waterwheel assembly
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+----
+
 
 4. Decorative assembly
 -----------------------
