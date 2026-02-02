@@ -198,14 +198,34 @@ Step 4：Install Roof
 
 - **Parts list：** Basswood boards with “L”、DHT11 Sensor、PIR  Sensor、Light Sensor、Infrared Receiver Module、M3*12mm screw （8 PCS）、M3 Nut（8 PCS）.
 
-.. image:: _static/Assembly/11.lcd.png
+.. image:: _static/Assembly/13.roof.png
+   :width: 800
+   :align: center
+
+----
+
+**Step 4-2:Install Solar LED**
+
+- **Parts list：** Basswood boards with “M”、Solar LED、Glue（5 PCS）.
+
+.. image:: _static/Assembly/14.sola.png
+   :width: 800
+   :align: center
+
+----
+
+**Step 4-3:Install Roof**
+
+- **Parts list：** Basswood boards with “L、M”、 Blue Latch（4 PCS）.
+
+.. image:: _static/Assembly/15.roof.png
    :width: 800
    :align: center
 
 ----
 
 3. Waterwheel Assembly
----------------------
+----------------------
 
 
 4. Decorative assembly
