@@ -97,7 +97,7 @@ Step 2: Install Battery Box
 Step 3: Install Relay Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Relay Module 、M3*12mm screw （2 PCS）、M3 Nut（2 
+- **Parts list：** Relay Module 、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）
 
 .. image:: _static/Assembly/5.relay.png
    :width: 800
@@ -135,6 +135,22 @@ Step 6：Install Latch
 .. image:: _static/Assembly/7.latch.png
    :width: 800
    :align: center
+
+----
+
+Step 7：Install Cover Plate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “F”
+
+.. image:: _static/Assembly/9.gaiban.png
+   :width: 800
+   :align: center
+
+----
+
+Installation rendering of the base section
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ----
 
