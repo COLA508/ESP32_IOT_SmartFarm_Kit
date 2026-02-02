@@ -105,23 +105,23 @@ Step 3: Install Relay Module
 
 ----
 
-Step 4: Install Water Tank
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-- **Parts list：** Water Tank、Glue（3 PCS）.
-
-.. image:: _static/Assembly/6.water.png
-   :width: 800
-   :align: center
-
-----
-
-Step 5: Install Fence
+Step 4: Install Fence
 ~~~~~~~~~~~~~~~~~~~~~~
 
 - **Parts list：** Basswood boards with “B, C, D, E”.
 
 .. image:: _static/Assembly/8.fulan.png
+   :width: 800
+   :align: center
+
+----
+
+Step 5: Install Water Tank
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Water Tank、Glue（3 PCS）.
+
+.. image:: _static/Assembly/6.water.png
    :width: 800
    :align: center
 
@@ -185,7 +185,7 @@ Step 3：Install House
 
 - **Parts list：** Basswood boards with “G、H、J、K”、
 
-.. image:: _static/Assembly/11.lcd.png
+.. image:: _static/Assembly/12.house.png
    :width: 800
    :align: center
 
@@ -194,7 +194,9 @@ Step 3：Install House
 Step 4：Install Roof
 ~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Basswood boards with “J、K”、
+**Step 4-1:Install sensor Module**
+
+- **Parts list：** Basswood boards with “L”、DHT11 Sensor、PIR  Sensor、Light Sensor、Infrared Receiver Module、M3*12mm screw （8 PCS）、M3 Nut（8 PCS）.
 
 .. image:: _static/Assembly/11.lcd.png
    :width: 800
