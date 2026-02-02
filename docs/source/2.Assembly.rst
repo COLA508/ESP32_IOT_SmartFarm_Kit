@@ -82,7 +82,7 @@ Step 1: Install ESP32
 Step 2: Install Battery Box
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Battery Box 、M3*10mm Flat-head screw （2 PCS）、M3 Nut（2 PCS）
+- **Parts list：** Battery Box 、M3*10mm Flat-head screw （2 PCS）、M3 Nut（2 PCS）.
 
 .. image:: _static/Assembly/4.battary.png
    :width: 800
@@ -97,7 +97,7 @@ Step 2: Install Battery Box
 Step 3: Install Relay Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Relay Module 、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）
+- **Parts list：** Relay Module 、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
 
 .. image:: _static/Assembly/5.relay.png
    :width: 800
@@ -108,7 +108,7 @@ Step 3: Install Relay Module
 Step 4: Install Water Tank
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Water Tank、Glue（3 PCS）
+- **Parts list：** Water Tank、Glue（3 PCS）.
 
 .. image:: _static/Assembly/6.water.png
    :width: 800
@@ -119,7 +119,7 @@ Step 4: Install Water Tank
 Step 5: Install Fence
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Basswood boards with “B, C, D, E”
+- **Parts list：** Basswood boards with “B, C, D, E”.
 
 .. image:: _static/Assembly/8.fulan.png
    :width: 800
@@ -130,7 +130,7 @@ Step 5: Install Fence
 Step 6：Install Latch
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：**  Blue Latch（6 PCS）
+- **Parts list：**  Blue Latch（6 PCS）.
 
 .. image:: _static/Assembly/7.latch.png
    :width: 800
@@ -141,7 +141,7 @@ Step 6：Install Latch
 Step 7：Install Cover Plate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Basswood boards with “F”
+- **Parts list：** Basswood boards with “F”.
 
 .. image:: _static/Assembly/9.gaiban.png
    :width: 800
@@ -158,6 +158,27 @@ Installation rendering of the base section
 2. House Assembly
 ------------------
 
+Step 1：Install Fan Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “G”、Fan Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+
+.. image:: _static/Assembly/10.fan.png
+   :width: 800
+   :align: center
+
+----
+
+Step 2：Install Fan Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “H”、LCD1602 Screen、M3*12mm screw （4 PCS）、M3 Nut（4 PCS）.
+
+.. image:: _static/Assembly/11.lcd.png
+   :width: 800
+   :align: center
+
+----
 
 3. Waterwheel Assembly
 ---------------------
