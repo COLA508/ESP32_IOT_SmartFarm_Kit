@@ -232,14 +232,62 @@ Installation rendering of the base section
 3. Waterwheel Assembly
 ----------------------
 
-Step 1：Install Water Wheel
+Step 1：Install Water Pump
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “P”、Water Pump、Water Pipe、Glue（1 PCS）.
+
+.. image:: _static/Assembly/17.pipe.png
+   :width: 800
+   :align: center
+
+----
+
+Step 2：Install Waterwheel Support
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Yellow painted waterwheel support wooden planks（2 PCS）.
+
+.. image:: _static/Assembly/18.sczj.png
+   :width: 800
+   :align: center
+
+----
+
+Step 3：Install Water Wheel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Waterwheel（2 PCS）、Waterwheel baffle（10 PCS）
+- **Parts list：** Waterwheel（2 PCS）、Waterwheel baffle（10 PCS）.
 
 .. image:: _static/Assembly/16.water1.png
    :width: 800
    :align: center
+
+.. image:: _static/Assembly/16.water2.png
+   :width: 800
+   :align: center
+
+----
+
+Step 4：Install WaterWheel
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：**  Waterwheel、Circular（4 PCS）、Round Wooden Stick.
+
+.. image:: _static/Assembly/19.gdsc.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/19.gdsc2.png
+   :width: 800
+   :align: center
+
+----
+
+Step 5：Install water level sensor
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：**  Basswood boards with “N”、 Water Level Sensor、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
 
 .. image:: _static/Assembly/16.water2.png
    :width: 800
