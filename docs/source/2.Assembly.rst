@@ -180,6 +180,28 @@ Step 2：Install Fan Module
 
 ----
 
+Step 3：Install House
+~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “G、H、J、K”、
+
+.. image:: _static/Assembly/11.lcd.png
+   :width: 800
+   :align: center
+
+----
+
+Step 4：Install Roof
+~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Basswood boards with “J、K”、
+
+.. image:: _static/Assembly/11.lcd.png
+   :width: 800
+   :align: center
+
+----
+
 3. Waterwheel Assembly
 ---------------------
 
