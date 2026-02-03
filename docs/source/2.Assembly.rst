@@ -358,7 +358,7 @@ Step 5：Install Water Level Sensor
 
 .. admonition:: Precautions
 
-   - This step requires using a 4-pin cable to connect the water level sensor to the IO35 pin of the expansion board.
+   - This step requires using a 3-pin cable to connect the water level sensor to the IO35 pin of the expansion board.
 
 ----
 
@@ -501,5 +501,5 @@ Step 8：Install Latch
 .. admonition:: Precautions
 
    - After ensuring the module's wiring is connected and the power-on test shows no problems, install the latches and tighten them.
-   
+
 ----
