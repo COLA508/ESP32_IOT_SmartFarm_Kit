@@ -14,7 +14,7 @@ Wiring Diagram
 ---------------
 
 .. image:: _static/Assembly/1.Wiring1.png
-   :width: 800
+   :width: 1000
    :align: center
 
 .. raw:: html
