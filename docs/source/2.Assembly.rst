@@ -13,7 +13,7 @@ Assembly Video
 Wiring Diagram
 ---------------
 
-.. image:: _static/Assembly/1.Wiring.png
+.. image:: _static/Assembly/1.Wiring1.png
    :width: 800
    :align: center
 
