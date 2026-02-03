@@ -5,7 +5,6 @@ Components Introduction
 
 ----
 
-
 1. ESP32 DevKit
 ---------------
 
@@ -34,7 +33,27 @@ It features an onboard 2.54mm pitch S/V/G expansion header interface, with indep
 
 ----
 
-6. RGB Strip Light
+2. ESP32 expansion board
+------------------------
+
+The ESP32 expansion board is designed specifically for the ESP32-DevKit and uses the XH2.54 standard interface to prevent incorrect connections. 
+
+.. image:: _static/Component/1.EXB.png
+   :width: 800
+   :align: center
+
+This design enhances the connection process and improves development efficiency. Furthermore, an integrated voltage regulator chip ensures stable circuit operation, and two rows of pins provide users with flexible wiring options.
+
+Basic specifications include: 
+
+- 13 three-pin input/output pins（for analog and digital connections）, compatible with 5V power; 
+- Two four-pin digital connectors（containing two signal connections, one power connection, and one ground connection）; 
+- One additional four-pin digital connector（with three signal connections and one ground connection）; 
+- Two I2C connections; one serial communication port; and two 2.54mm pitch pins for easy connection of servos.
+
+----
+
+3. RGB Strip Light
 ------------------
 
 .. image:: _static/Component/13.rgb.png
@@ -64,3 +83,4 @@ The data transfer protocol use single NZR communication mode. After the pixel po
 LED with low driving voltage, environmental protection and energy saving, high brightness, scattering angle is large, good consistency, low power, long life and other advantages. The control chip integrated in LED above becoming more simple circuit, small volume, convenient installation.
 
 ----
+
