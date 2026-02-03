@@ -80,6 +80,72 @@ The combination of these traces acts like a variable resistor, changing the resi
 
 ----
 
+4. DHT11 Module
+----------------
+
+.. image:: _static/Component/9.DHT11.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+The digital temperature and humidity sensor DHT11 is a composite sensor that contains a calibrated digital signal output of temperature and humidity. 
+The technology of a dedicated digital modules collection and the temperature and humidity sensing technology are applied to ensure that the product has high reliability and excellent long-term stability.
+
+The sensor includes a resistive sense of wet component and an NTC temperature measurement device, and is connected with a high-performance 8-bit microcontroller. 
+
+Only three pins are available for use: VCC, GND, and Signal. 
+The communication process begins with the DATA line sending start signals to DHT11, and DHT11 receives the signals and returns an answer signal. 
+Then the host receives the answer signal and begins to receive 40-bit humiture data (8-bit humidity integer + 8-bit humidity decimal + 8-bit temperature integer + 8-bit temperature decimal + 8-bit checksum).
+
+**Features**
+
+    #. Humidity measurement range: 20 - 90%RH
+    #. Temperature measurement range: 0 - 60℃
+    #. Output digital signals indicating temperature and humidity
+    #. Working voltage:DC 5V; PCB size: 2.0 x 2.0 cm
+    #. Humidity measurement accuracy: ±5%RH
+    #. Temperature measurement accuracy: ±2℃
+
+----
+
+
+4. PIR sensor
+--------------
+
+.. image:: _static/Component/7.pir.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+The PIR sensor detects infrared heat radiation that can be used to detect the presence of organisms that emit infrared heat radiation.
+
+The PIR sensor has two LEDs. When it is powered on normally, the red light will light up, and when it detects a human body, the blue light will light up.
+
+----
+
+4. Infrared Receiver Module
+---------------------------
+
+.. image:: _static/Component/8.IR.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+An infrared-receiver is a component which receives infrared signals and can independently receive infrared rays and output signals compatible with TTL level. It is similar with a normal plastic-packaged transistor in size and is suitable for all kinds of infrared remote control and infrared transmission.
+
+Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless communication technology. Infrared light has a slightly longer wavelength than visible light, so it is imperceptible to the human eye - ideal for wireless communication. A common modulation scheme for infrared communication is 38KHz modulation.
+
+----
+
 4. RGB Strip Light
 ------------------
 
