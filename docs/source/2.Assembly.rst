@@ -387,24 +387,48 @@ Step 4：Install Feeding Trough
 
 ----
 
-Step 5：Install Fence Gate
+Step 5：Install the sheep
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Sheep plank.
+
+.. image:: _static/Assembly/32.sheep.png
+   :width: 800
+   :align: center
+
+----
+
+Step 6：Install Fence Gate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Parts list：** Bull-head shaped fence gate planks
 
-.. image:: _static/Assembly/32.gate.png
+.. image:: _static/Assembly/33.gate.png
    :width: 800
    :align: center
 
 ----
 
-Step 6：Install Windmill Blades
+Step 7：Install Windmill Blades
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Parts list：** Green windmill blade wooden board
 
-.. image:: _static/Assembly/32.gate.png
+.. image:: _static/Assembly/34.sy.png
    :width: 800
    :align: center
 
 ----
+
+Step 8：Install Latch
+~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Blue Latch（4 PCS）
+
+.. image:: _static/Assembly/35.latch.png
+   :width: 800
+   :align: center
+
+----
+
+
