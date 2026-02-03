@@ -13,7 +13,7 @@ Assembly Video
 Wiring Diagram
 ---------------
 
-.. image:: _static/Assembly/1.WIRING.png
+.. image:: _static/Assembly/1.Wiring.png
    :width: 800
    :align: center
 
@@ -31,13 +31,11 @@ Wiring Diagram
    * - Relay Module
      - 23
    * - Active Buzzer
-     - 13
+     - 26
    * - Fan
      - 27
    * - PIR Sensor
      - 33
-   * - LED
-     - 26
    * - Light Sensor
      - 34
    * - Infrared Receiver Module
@@ -49,10 +47,10 @@ Wiring Diagram
    * - Speech Recognition
      - 16, 17
    * - LCD1602
-     - I2C-SCL, SDA
+     - I2C-SCL、SDA
    * - RGB Light Strip
      - 12
-    
+
 ----
 
 1. Base Assembly
