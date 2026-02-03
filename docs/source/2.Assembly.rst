@@ -63,13 +63,17 @@ Step 1: Install ESP32
    :width: 800
    :align: center
 
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
 .. admonition:: Precautions
 
   - The serial numbers on the basswood boards are used only to distinguish one board from another. In the tutorial examples, the serial numbers face outward for ease of illustration, but they should face inward during installation. This principle should also be followed for subsequent basswood installations.
 
 ----
 
-**Step 1-2: Fixed ESP32**
+**Step 1-2: Install ESP32**
 
 - **Parts list：** ESP32 development board、M3*6mm screw （4 PCS）.
 
@@ -161,7 +165,7 @@ Design sketch of base part after assembly
 Step 1：Install Fan Module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Basswood boards with “G”、Fan Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+- **Parts list：** Basswood boards with “H”、Fan Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
 
 .. image:: _static/Assembly/10.fan.png
    :width: 800
@@ -169,10 +173,10 @@ Step 1：Install Fan Module
 
 ----
 
-Step 2：Install Fan Module
+Step 2：Install LCD1602 Screen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Basswood boards with “H”、LCD1602 Screen、M3*12mm screw （4 PCS）、M3 Nut（4 PCS）.
+- **Parts list：** Basswood boards with “G”、LCD1602 Screen、M3*12mm screw （4 PCS）、M3 Nut（4 PCS）.
 
 .. image:: _static/Assembly/11.lcd.png
    :width: 800
