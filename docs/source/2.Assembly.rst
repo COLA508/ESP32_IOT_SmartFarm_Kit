@@ -101,6 +101,8 @@ Step 2: Install Battery Box
 .. admonition:: Precautions
 
   - When securing the battery compartment, use flat-head screws. If you use round-head screws, the screws will protrude and press against the battery, preventing it from being installed properly.
+  
+  - Batteries are not included in the package; you will need to bring your own 6 AA batteries.
 
 ----
 
@@ -112,6 +114,12 @@ Step 3: Install Relay Module
 .. image:: _static/Assembly/5.relay.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+   - In this step, connect the expansion board to the ESP32 development board.
+
+   - Then connect the relay module to pin IO23 of the expansion board using a 3-pin wire.
 
 ----
 
@@ -134,6 +142,10 @@ Step 5: Install Water Tank
 .. image:: _static/Assembly/6.water.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+   - Use three round adhesive dots to stick to the bottom of the sink, adjust their position, and fix them to the wooden board A.
 
 ----
 
@@ -177,6 +189,10 @@ Step 1：Install Fan Module
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+  - This step requires using a 3-pin wire to connect the fan module to pin IO27 of the expansion board.
+
 ----
 
 Step 2：Install LCD1602 Screen
@@ -187,6 +203,10 @@ Step 2：Install LCD1602 Screen
 .. image:: _static/Assembly/11.lcd.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+  - This step requires using a 4-pin wire to connect the LCD1602 screen to the I2C pin of the expansion board.
 
 ----
 
@@ -212,6 +232,12 @@ Step 4：Install Roof
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+  - This step requires using a 3-pin cable to connect the following sensor module to the expansion board.
+
+  - DHT11 Sensor —— IO15、PIR Sensor —— IO33、Light Sensor —— IO34、Infrared Receiver Module —— IO32.
+
 ----
 
 **Step 4-2:Install Solar LED**
@@ -221,6 +247,10 @@ Step 4：Install Roof
 .. image:: _static/Assembly/14.sola.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+   - In this step, five round adhesive dots are needed to fix the solar panel to the wooden board M.
 
 ----
 
@@ -250,6 +280,17 @@ Step 1：Install Water Pump
 .. image:: _static/Assembly/17.pipe.png
    :width: 800
    :align: center
+
+
+.. admonition:: Precautions
+
+   - In this step, connect the water pump to the XH2.54-2Pin interface of the relay module and short COM to GND using a jumper cap.
+
+   - When connecting water pipes, maintain their natural curvature and avoid forcibly bending them at the joints to prevent flattening the pipes and causing water flow interruption. 
+   
+   - After installation, a water test should be conducted, and the position of the water pipes should be adjusted according to the water flow conditions to ensure that all joints are tightly connected without leaks or overflows.
+
+   - After adjusting the position of the water pipes, you can use round adhesive dots to fix the water pump inside the water tank.
 
 ----
 
@@ -292,6 +333,10 @@ Step 4：Install WaterWheel
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+   - When installing the fixing ring, a gap of about 3mm should be left on both the left and right sides to ensure that the waterwheel can rotate freely.
+
 ----
 
 Step 5：Install Water Level Sensor
@@ -310,7 +355,11 @@ Step 5：Install Water Level Sensor
 .. image:: _static/Assembly/20.waterlevel2.png
    :width: 800
    :align: center
-   
+
+.. admonition:: Precautions
+
+   - This step requires using a 4-pin cable to connect the water level sensor to the IO35 pin of the expansion board.
+
 ----
 
 Rendering of the waterwheel assembly
@@ -338,6 +387,10 @@ Step 1：Install Speech Recognition Module
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+   - This step requires using a 4-pin cable to connect the voice recognition module to the IO16/17 pins of the expansion board.
+
 ----
 
 Step 2：Install Buzzer Module
@@ -357,6 +410,10 @@ Step 2：Install Buzzer Module
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+   - This step requires using a 3-pin wire to connect the buzzer module to the IO13 pin of the expansion board.
+
 ----
 
 Step 3：Install RGB LED Strips
@@ -371,6 +428,12 @@ Step 3：Install RGB LED Strips
 .. image:: _static/Assembly/28.rgb2.png
    :width: 800
    :align: center
+
+.. admonition:: Precautions
+
+   - First tear off the blue tape on the back of the light strip, and then stick the light strip on the back of the fence.
+
+   - This step requires using a 3-pin wire to connect the RGB LED strip to the IO12 pin of the expansion board.
 
 ----
 
@@ -435,6 +498,8 @@ Step 8：Install Latch
    :width: 800
    :align: center
 
+.. admonition:: Precautions
+
+   - After ensuring the module's wiring is connected and the power-on test shows no problems, install the latches and tighten them.
+   
 ----
-
-
