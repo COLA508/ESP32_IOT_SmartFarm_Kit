@@ -4,8 +4,14 @@ Smart Farm Assembly
 Assembly Video
 --------------
 
-Wiring
-------
+- The video contains an assembly tutorial for the smart farm. By watching this video, you can quickly assemble it. 
+
+- If you need a more detailed assembly tutorial, please continue to view the text and image tutorial below.
+
+----
+
+Wiring Diagram
+---------------
 
 .. image:: _static/Assembly/1.WIRING.png
    :width: 800
