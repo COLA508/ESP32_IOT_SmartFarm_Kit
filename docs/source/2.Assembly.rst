@@ -288,7 +288,7 @@ Step 4：Install WaterWheel
 
 ----
 
-Step 5：Install water level sensor
+Step 5：Install Water Level Sensor
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - **Parts list：**  Basswood boards with “N”、Extended pad（3 PCS）、Water Level Sensor、M3*17mm screw （2 PCS）、M3 Nut（2 PCS）.
@@ -353,20 +353,57 @@ Step 2：Install Buzzer Module
 
 ----
 
-Step 3：Install Buzzer Module
+Step 3：Install RGB LED Strips
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-- **Parts list：** Yellow short-side fence planks、 Buzzer Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+- **Parts list：** Yellow long-side fence planks、RGB LED strips.
 
-.. image:: _static/Assembly/24.buzzer1.png
+.. image:: _static/Assembly/27.rgb1.png
    :width: 800
    :align: center
 
-.. image:: _static/Assembly/25.buzzer2.png
+.. image:: _static/Assembly/28.rgb2.png
    :width: 800
    :align: center
 
-.. image:: _static/Assembly/26.buzzer3.png
+----
+
+Step 4：Install Feeding Trough
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Semi-circular feeding trough wooden board （2 PCS）、rectangular feeding trough wooden board（2 PCS）.
+
+.. image:: _static/Assembly/29.feed1.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/30.feed2.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/31.feed3.png
+   :width: 800
+   :align: center
+
+----
+
+Step 5：Install Fence Gate
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Bull-head shaped fence gate planks
+
+.. image:: _static/Assembly/32.gate.png
+   :width: 800
+   :align: center
+
+----
+
+Step 6：Install Windmill Blades
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Green windmill blade wooden board
+
+.. image:: _static/Assembly/32.gate.png
    :width: 800
    :align: center
 
