@@ -17,4 +17,5 @@ ESP32 IOT SmartFarm Kit
 
    5.Arduino
    6.Course
+   8.Components
    7.FAQ
