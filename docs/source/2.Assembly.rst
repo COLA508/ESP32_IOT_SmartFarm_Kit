@@ -312,6 +312,62 @@ Rendering of the waterwheel assembly
 
 ----
 
-
-4. Decorative assembly
+4. Decorative Assembly
 -----------------------
+
+Step 1：Install Speech Recognition Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Green apple tree wood board、Speech Recognition Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+
+.. image:: _static/Assembly/21.speech.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/22.speech2.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/23.speech3.png
+   :width: 800
+   :align: center
+
+----
+
+Step 2：Install Buzzer Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Yellow short-side fence planks、 Buzzer Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+
+.. image:: _static/Assembly/24.buzzer1.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/25.buzzer2.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/26.buzzer3.png
+   :width: 800
+   :align: center
+
+----
+
+Step 3：Install Buzzer Module
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- **Parts list：** Yellow short-side fence planks、 Buzzer Module、M3*12mm screw （2 PCS）、M3 Nut（2 PCS）.
+
+.. image:: _static/Assembly/24.buzzer1.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/25.buzzer2.png
+   :width: 800
+   :align: center
+
+.. image:: _static/Assembly/26.buzzer3.png
+   :width: 800
+   :align: center
+
+----
