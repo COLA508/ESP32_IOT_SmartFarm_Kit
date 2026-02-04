@@ -194,6 +194,7 @@ Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless comm
 Electronic buzzers, featuring a compact design, are versatile components powered by direct current (DC) and are commonly found across a variety of electronic devices. They serve as auditory indicators in applications such as computers, printers, photocopiers, security systems, electronic playthings, vehicular electronics, telephones, and timing devices, among others.
 
 Classification of buzzers is based on their functionality, distinguishing between active and passive types.
+
 .. image:: _static/Component/11.BUZZER2.png
    :width: 200
    :align: center
