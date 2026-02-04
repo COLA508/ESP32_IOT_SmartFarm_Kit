@@ -65,13 +65,17 @@ Wiring Diagram
    
    The four sensor modules (DHT11, PIR, IR Receiver, and Light)、motor fan module and LCD1602 screen on the roof pass through the interior of the house and are connected to the expansion board via holes marked "F" in the wooden planks.
  
- .. image:: _static/Assembly/42.Wiring2.png
+ .. image:: _static/Assembly/43.Wiring2.png
     :width: 800
     :align: center
 
+ .. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
    The sensor modules below are passed through the corresponding holes as shown in the diagram and connected to the expansion board.
 
- .. image:: _static/Assembly/41.Wiring.png
+ .. image:: _static/Assembly/42.Wiring.png
     :width: 800
     :align: center 
 
