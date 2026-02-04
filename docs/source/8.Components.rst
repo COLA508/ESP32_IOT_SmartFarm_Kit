@@ -58,7 +58,7 @@ Basic specifications include:
 ----
 
 3. Water Level Sensor
---------------------
+----------------------
 
 .. image:: _static/Component/2.waterlevel.png
    :width: 800
@@ -80,8 +80,8 @@ The combination of these traces acts like a variable resistor, changing the resi
 
 ----
 
-4. DHT11 Module
-----------------
+4. DHT11 Sensor
+---------------
 
 .. image:: _static/Component/9.DHT11.png
    :width: 800
@@ -111,8 +111,7 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 
 ----
 
-
-4. PIR sensor
+5. PIR sensor
 --------------
 
 .. image:: _static/Component/7.pir.png
@@ -129,7 +128,31 @@ The PIR sensor has two LEDs. When it is powered on normally, the red light will 
 
 ----
 
-4. Infrared Receiver Module
+6. Light Sensor
+---------------
+
+.. image:: _static/Component/12.light.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+Light sensors are mainly composed of photoresistor.
+
+.. image:: _static/Component/15.light2.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+Photoresistor is simply a light sensitive resistor. It is an active component that decreases resistance with respect to receiving luminosity (light) on the component’s light sensitive surface. Photoresistor’s resistance value will change in proportion to the ambient light detected. With this characteristic, we can use a Photoresistor to detect light intensity. The Photoresistor and its electronic symbol are as follows.
+
+
+7. Infrared Receiver Module
 ---------------------------
 
 .. image:: _static/Component/8.IR.png
@@ -146,7 +169,110 @@ Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless comm
 
 ----
 
-4. RGB Strip Light
+8. Active Buzzer Module
+-----------------------
+
+.. image:: _static/Component/10.BUZZER.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+Electronic buzzers, featuring a compact design, are versatile components powered by direct current (DC) and are commonly found across a variety of electronic devices. They serve as auditory indicators in applications such as computers, printers, photocopiers, security systems, electronic playthings, vehicular electronics, telephones, and timing devices, among others.
+
+Classification of buzzers is based on their functionality, distinguishing between active and passive types (as illustrated in the accompanying diagram). 
+
+.. image:: _static/Component/11.BUZZER2.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+The operational distinction between active and passive buzzers is characterized by their internal circuitry and activation requirements:
+
+- **Active Buzzers** are self-contained, featuring an integrated oscillating circuit that produces sound immediately when powered by DC. Their design eliminates the need for external signal modulation to generate audible tones.
+
+- **Passive Buzzers** lack an internal oscillating circuit, and thus, are non-responsive to DC signals in terms of sound output. To induce sound from a passive buzzer, a specific frequency range of square wave signals, typically between 2 kHz and 5 kHz, must be supplied.
+
+The presence of these internal oscillating circuits in active buzzers contributes to their higher cost in comparison to passive models, which require additional circuitry for sound emission.
+
+**The active buzzer used in this kit**
+
+----
+
+9. Relay Module
+----------------
+
+.. image:: _static/Component/17.RELAY.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+Relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
+
+There are 5 parts in every relay:
+
+**Electromagnet** - It consists of an iron core wounded by coil of
+wires. When electricity is passed through, it becomes magnetic.
+Therefore, it is called electromagnet.
+
+**Armature** - The movable magnetic strip is known as armature. When
+current flows through them, the coil is it energized thus producing a
+magnetic field which is used to make or break the normally open (N/O) or
+normally close (N/C) points. And the armature can be moved with direct
+current (DC) as well as alternating current (AC).
+
+**Spring** - When no currents flow through the coil on the
+electromagnet, the spring pulls the armature away so the circuit cannot
+be completed.
+
+Set of electrical **contacts** - There are two contact points:
+
+-  Normally open - connected when the relay is activated, and disconnected when it is inactive.
+
+-  Normally close - not connected when the relay is activated, and connected when it is inactive.
+
+.. image:: _static/Component/16.RELAY2.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+The working principle of relay is simple. When power is supplied to the relay, currents start flowing through the control coil; as a result, the electromagnet starts energizing. Then the armature is attracted to the coil, pulling down the moving contact together thus connecting with the normally open contacts. So the circuit with the load is energized. Then breaking the circuit would a similar case, as the moving contact will be pulled up to the normally closed contacts under the force of the spring. In this way, the switching on and off of the relay can control the state of a load circuit.
+
+**This kit uses a custom relay module. Simply plug the device to be controlled directly into the XH2.54-2PIN interface and connect COM and GND with a jumper cap to achieve direct control of the device. This plug-and-play design eliminates the need for screwing in traditional wiring and is widely compatible with various common devices, such as motors.**
+
+----
+
+10. Speech Recognition Module
+-----------------------------
+
+.. image:: _static/Component/18.SPEECH.png
+   :width: 800
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+This kit uses a high-performance offline speech recognition module. Its biggest feature is that it does not require an internet connection; all speech recognition and processing are completed locally on the chip, resulting in fast response and privacy protection.
+
+It can communicate with main control chips such as Arduino, ESP32, and STM32, and send the recognition results as commands to achieve more complex system control.
+
+This module works by converting sound into electrical signals using a microphone, then extracting sound features using a built-in chip to quickly match pre-set wake-up words and command words (such as turning on a water pump). Once the recognition is successful, it will immediately execute the preset action, such as directly controlling a pin to output a high level to turn on a desk lamp, or sending commands to other controllers via serial port.
+
+----
+
+11. RGB Strip Light
 ------------------
 
 .. image:: _static/Component/13.rgb.png
@@ -177,7 +303,7 @@ LED with low driving voltage, environmental protection and energy saving, high b
 
 ----
 
-5. Water Pump
+12. Water Pump
 -------------
 
 .. image:: _static/Component/3.pump.png
@@ -208,4 +334,3 @@ It's highly suitable for beginners to create a fountain or plant watering projec
 * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
 
 ----
-
