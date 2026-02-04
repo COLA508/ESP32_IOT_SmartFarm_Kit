@@ -349,11 +349,11 @@ Step 5：Install Water Level Sensor
 
 - **Parts list：**  Basswood boards with “N”、Extended pad（3 PCS）、Water Level Sensor、M3*17mm screw （2 PCS）、M3 Nut（2 PCS）.
 
-.. image:: _static/Assembly/20.waterlevel3.png
+.. image:: _static/Assembly/20.level.png
    :width: 800
    :align: center
 
-.. image:: _static/Assembly/20.waterlevel1.png
+.. image:: _static/Assembly/20.level2.png
    :width: 800
    :align: center
 
