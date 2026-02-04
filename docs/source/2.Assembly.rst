@@ -1,6 +1,12 @@
 Smart Farm Assembly
 ==================
 
+.. image:: _static/Assembly/41.com.jpg
+   :width: 1000
+   :align: center
+
+----
+
 Assembly Video
 --------------
 
@@ -367,8 +373,12 @@ Step 5：Install Water Level Sensor
 
 ----
 
-Rendering of the waterwheel assembly
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The waterwheel assembly is shown in the picture below.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: _static/Assembly/40.SC3.jpg
+   :width: 800
+   :align: center
 
 ----
 
