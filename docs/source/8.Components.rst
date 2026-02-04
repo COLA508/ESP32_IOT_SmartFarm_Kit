@@ -369,7 +369,7 @@ I2C LCD1602 Display Screen integrates an I2C interface, which connects the seria
 
    <div style="margin-top: 30px;"></div>
 
-Potentiometer: It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
+**Potentiometer:** It is used to adjust the contrast (the clarity of the displayed text), which is increased in the clockwise direction and decreased in the counterclockwise direction.
 
 ----
 
