@@ -17,7 +17,7 @@ Automatic Control
 
 ----
 
-Infrared remote control
+Infrared Remote Control
 -----------------------
  - The OK button can turn on the fan, water pump, and RGB lights with one click, while the 0 button can turn them off with one click.
  - Press button 1 to turn on the fan, press button 2 to turn on the RGB light, press button 3 to turn on the water pump, press button 4 to turn on the alarm mode, press button 6 to turn on the RGB light supplement, and press buttons 7, 8, and 9 to switch between three RGB light effects.
@@ -25,7 +25,7 @@ Infrared remote control
 
 ----
 
-Speech Recognition control
+Speech Recognition Control
 ----------------------------
 
 This kit supports voice recognition, allowing users to directly control LED lights, fans, doors and windows, and adjust the volume through voice commands.  
@@ -47,7 +47,7 @@ This kit supports voice recognition, allowing users to directly control LED ligh
 
 ----
 
-App control
+App Control
 -----------
 
 1. APP Download
