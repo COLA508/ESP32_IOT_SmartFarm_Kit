@@ -105,7 +105,7 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
     #. Humidity measurement range: 20 - 90%RH
     #. Temperature measurement range: 0 - 60℃
     #. Output digital signals indicating temperature and humidity
-    #. Working voltage:DC 5V; PCB size: 2.0 x 2.0 cm
+    #. Working voltage:DC 5V; 
     #. Humidity measurement accuracy: ±5%RH
     #. Temperature measurement accuracy: ±2℃
 
@@ -151,6 +151,7 @@ Light sensors are mainly composed of photoresistor.
 
 Photoresistor is simply a light sensitive resistor. It is an active component that decreases resistance with respect to receiving luminosity (light) on the component’s light sensitive surface. Photoresistor’s resistance value will change in proportion to the ambient light detected. With this characteristic, we can use a Photoresistor to detect light intensity. The Photoresistor and its electronic symbol are as follows.
 
+----
 
 7. Infrared Receiver Module
 ---------------------------
@@ -182,8 +183,7 @@ Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless comm
 
 Electronic buzzers, featuring a compact design, are versatile components powered by direct current (DC) and are commonly found across a variety of electronic devices. They serve as auditory indicators in applications such as computers, printers, photocopiers, security systems, electronic playthings, vehicular electronics, telephones, and timing devices, among others.
 
-Classification of buzzers is based on their functionality, distinguishing between active and passive types (as illustrated in the accompanying diagram). 
-
+Classification of buzzers is based on their functionality, distinguishing between active and passive types.
 .. image:: _static/Component/11.BUZZER2.png
    :width: 200
    :align: center
@@ -217,7 +217,7 @@ The presence of these internal oscillating circuits in active buzzers contribute
 
 Relay is a device which is used to provide connection between two or more points or devices in response to the input signal applied. In other words, relays provide isolation between the controller and the device as devices may work on AC as well as on DC. However, they receive signals from a microcontroller which works on DC hence requiring a relay to bridge the gap. Relay is extremely useful when you need to control a large amount of current or voltage with small electrical signal.
 
-There are 5 parts in every relay:
+There are 4 parts in every relay:
 
 **Electromagnet** - It consists of an iron core wounded by coil of
 wires. When electricity is passed through, it becomes magnetic.
