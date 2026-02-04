@@ -61,7 +61,7 @@ Wiring Diagram
 
 .. warning::
    
-   - To ensure that each module works properly, please connect the wires as shown in the following image：
+   - **To ensure that each module works properly, please connect the wires as shown in the following image：**
    
    The four sensor modules (DHT11, PIR, IR Receiver, and Light)、motor fan module and LCD1602 screen on the roof pass through the interior of the house and are connected to the expansion board via holes marked "F" in the wooden planks.
  
@@ -74,6 +74,10 @@ Wiring Diagram
    <div style="margin-top: 30px;"></div>
 
    The sensor modules below are passed through the corresponding holes as shown in the diagram and connected to the expansion board.
+
+ .. raw:: html
+
+   <div style="margin-top: 30px;"></div>
 
  .. image:: _static/Assembly/42.WIRING1.png
     :width: 800
