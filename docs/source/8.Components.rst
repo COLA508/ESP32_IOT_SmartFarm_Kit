@@ -111,7 +111,7 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 
 ----
 
-5. PIR sensor
+5. PIR Sensor
 --------------
 
 .. image:: _static/Component/7.pir.png
