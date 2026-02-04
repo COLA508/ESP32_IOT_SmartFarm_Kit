@@ -350,7 +350,7 @@ It's highly suitable for beginners to create a fountain or plant watering projec
 -------------------
 
 .. image:: _static/Component/19.lcd.png
-   :width: 200
+   :width: 800
    :align: center
 
 .. raw:: html
