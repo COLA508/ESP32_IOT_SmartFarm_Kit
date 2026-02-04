@@ -61,7 +61,7 @@ Basic specifications include:
 ----------------------
 
 .. image:: _static/Component/2.waterlevel.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -84,7 +84,7 @@ The combination of these traces acts like a variable resistor, changing the resi
 ---------------
 
 .. image:: _static/Component/9.DHT11.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -115,7 +115,7 @@ Then the host receives the answer signal and begins to receive 40-bit humiture d
 --------------
 
 .. image:: _static/Component/7.pir.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -132,7 +132,7 @@ The PIR sensor has two LEDs. When it is powered on normally, the red light will 
 ---------------
 
 .. image:: _static/Component/12.light.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -142,7 +142,7 @@ The PIR sensor has two LEDs. When it is powered on normally, the red light will 
 Light sensors are mainly composed of photoresistor.
 
 .. image:: _static/Component/15.light2.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -156,7 +156,7 @@ Photoresistor is simply a light sensitive resistor. It is an active component th
 ---------------------------
 
 .. image:: _static/Component/8.IR.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -173,7 +173,7 @@ Infrared, or IR, communication is a popular, low-cost, easy-to-use wireless comm
 -----------------------
 
 .. image:: _static/Component/10.BUZZER.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -185,7 +185,7 @@ Electronic buzzers, featuring a compact design, are versatile components powered
 Classification of buzzers is based on their functionality, distinguishing between active and passive types (as illustrated in the accompanying diagram). 
 
 .. image:: _static/Component/11.BUZZER2.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -208,7 +208,7 @@ The presence of these internal oscillating circuits in active buzzers contribute
 ----------------
 
 .. image:: _static/Component/17.RELAY.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -239,7 +239,7 @@ Set of electrical **contacts** - There are two contact points:
 
 -  Normally close - not connected when the relay is activated, and connected when it is inactive.
 
-.. image:: _static/Component/16.RELAY2.png
+.. image:: _static/Component/16.relay2.png
    :width: 800
    :align: center
 
@@ -257,7 +257,7 @@ The working principle of relay is simple. When power is supplied to the relay, c
 -----------------------------
 
 .. image:: _static/Component/18.SPEECH.png
-   :width: 800
+   :width: 200
    :align: center
 
 .. raw:: html
@@ -334,3 +334,7 @@ It's highly suitable for beginners to create a fountain or plant watering projec
 * It is a submersible pump and should be used that way. It tends to heat too much that there's a risk of overheating if you turn it on unsubmerged.
 
 ----
+
+13. LCD 1602 Screen
+-------------------
+
