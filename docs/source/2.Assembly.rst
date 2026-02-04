@@ -19,7 +19,7 @@ Assembly Video
 Wiring Diagram
 ---------------
 
-.. image:: _static/Assembly/1.Wiring1.png
+.. image:: _static/Assembly/1.Wiring.png
    :width: 1000
    :align: center
 
@@ -49,7 +49,7 @@ Wiring Diagram
    * - DHT11 Sensor
      - 15
    * - Water Level Sensor
-     - 35
+     - 36
    * - Speech Recognition
      - 16, 17
    * - LCD1602
