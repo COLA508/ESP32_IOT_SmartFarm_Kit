@@ -3,9 +3,8 @@ Introduction
 
 **Welcome to ESP32-IOT-SmartFarm-kit**
 
-.. image:: _static/1.SmartHome.png
-   :alt: Completed LA-Smart-Home Kit
-   :width: 800
+.. image:: _static/Assembly/41.com.jpg
+   :width: 1000
    :align: center
 
 ----
