@@ -187,6 +187,10 @@ Wiring Diagram
 
  - PIR Sensor → ESP32 IO33
 
+ - Light Sensor → ESP32 IO34
+
+ - Buzzer Module → ESP32 IO26
+
 .. image:: _static/COURSE/2.light.png
    :width: 800
    :align: center
@@ -251,6 +255,139 @@ Effect Display
 Open the serial port monitor and set the baud rate to 115200. The serial port will then display whether a human body has been detected.
 
 .. image:: _static/COURSE/8.pir.png
+   :width: 500
+   :align: center
+
+----
+
+Course 4：Burglar Alarm
+-----------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - PIR Sensor → ESP32 IO33
+
+ - Light Sensor → ESP32 IO33
+
+ - Buzzer Module → ESP32 IO33
+
+.. image:: _static/COURSE/9.alarm.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+  // Pin definitions
+  const int BUZZER_PIN = 26;
+  const int PIR_PIN = 33;
+  const int LIGHT_PIN = 34;
+
+  // Constants
+  const int LIGHT_THRESHOLD = 10;
+  const unsigned long ALARM_DURATION = 5000;
+
+  // Variables
+  bool alarmActive = false;
+  unsigned long alarmStartTime = 0;
+
+  void setup() {
+    Serial.begin(115200);
+    Serial.println("Night Security Alarm System Started");
+    Serial.println("===================================");
+    
+    pinMode(BUZZER_PIN, OUTPUT);
+    pinMode(PIR_PIN, INPUT);
+    pinMode(LIGHT_PIN, INPUT);
+    
+    digitalWrite(BUZZER_PIN, LOW);
+    
+    Serial.println("System Ready - Monitoring...");
+  }
+
+  void loop() {
+    int lightValue = readLightLevel();
+    bool motionDetected = readMotion();
+    
+    Serial.print("Light Level: ");
+    Serial.print(lightValue);
+    Serial.print(" | Motion: ");
+    Serial.println(motionDetected ? "DETECTED" : "No");
+    
+    if (lightValue < LIGHT_THRESHOLD && motionDetected && !alarmActive) {
+      triggerAlarm();
+      Serial.println("ALARM TRIGGERED! Low light + motion detected!");
+    }
+    
+    if (alarmActive) {
+      handleActiveAlarm();
+    }
+    
+    delay(500);
+  }
+
+  // Read and normalize light level (0-100)
+  int readLightLevel() {
+    int rawValue = analogRead(LIGHT_PIN);
+    int normalizedValue = map(rawValue, 0, 4095, 0, 100);
+    normalizedValue = constrain(normalizedValue, 0, 100);
+    return normalizedValue;
+  }
+
+  // Read PIR motion sensor
+  bool readMotion() {
+    return digitalRead(PIR_PIN) == HIGH;
+  }
+
+  // Trigger alarm
+  void triggerAlarm() {
+    alarmActive = true;
+    alarmStartTime = millis();
+    digitalWrite(BUZZER_PIN, HIGH);
+    Serial.println("=== ALARM ACTIVATED ===");
+  }
+
+  // Handle active alarm
+  void handleActiveAlarm() {
+    unsigned long currentTime = millis();
+    if (currentTime - alarmStartTime >= ALARM_DURATION) {
+      stopAlarm();
+      Serial.println("Alarm stopped after duration");
+    }
+  }
+
+  // Stop alarm
+  void stopAlarm() {
+    alarmActive = false;
+    digitalWrite(BUZZER_PIN, LOW);
+    Serial.println("=== ALARM DEACTIVATED ===");
+  }
+
+----
+
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **4.Burglar Alarm.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+
+2.Download the **4.Burglar Alarm.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+When the ambient light drops to 10% and someone passes by, a buzzer alarm sounds and relevant information is displayed on the serial monitor.
+
+.. image:: _static/COURSE/10alarm.png
    :width: 500
    :align: center
 
