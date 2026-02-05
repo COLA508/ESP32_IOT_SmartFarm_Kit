@@ -11,9 +11,9 @@ The  Kit Course Learning
 
   The following courses all come with sample code. You have two options for flashing the code:
 
- - Option 1: If you choose to flash the code using the Arduino IDE, click here to jump to the Arduino IDE flashing tutorial. :ref:`Arduino IDE burning program`
+ Option 1: If you choose to flash the code using the Arduino IDE, click here to jump to the Arduino IDE flashing tutorial. :ref:`Arduino IDE burning program`
 
- - Option 1: If you choose to flash the code using Espressif's official flashing tool, click here to jump to the official flashing tool flashing tutorial. :ref:`Direct Burn Program`
+ Option 2: If you choose to flash the code using Espressif's official flashing tool, click here to jump to the official flashing tool flashing tutorial. :ref:`Direct Burn Program`
 
 ----
 
@@ -28,6 +28,8 @@ Wiring Diagram
 .. image:: _static/COURSE/1.DHT11.png
    :width: 600
    :align: center
+
+----
 
 Sample Code
 ~~~~~~~~~~~
