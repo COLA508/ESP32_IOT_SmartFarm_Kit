@@ -1013,8 +1013,8 @@ Effect Display
 
 The LCD1602 screen will display real-time information on monitored temperature, humidity, brightness, and water level.
 
-.. image:: _static/COURSE/16.rgb.png
-   :width: 500
+.. image:: _static/COURSE/17.lcd.png
+   :width: 600
    :align: center
 
 ----
