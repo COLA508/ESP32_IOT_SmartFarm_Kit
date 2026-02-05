@@ -33,7 +33,7 @@ It features an onboard 2.54mm pitch S/V/G expansion header interface, with indep
 
 ----
 
-2. ESP32 expansion board
+2. ESP32 Expansion Board
 ------------------------
 
 The ESP32 expansion board is designed specifically for the ESP32-DevKit and uses the XH2.54 standard interface to prevent incorrect connections. 

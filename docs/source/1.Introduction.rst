@@ -179,7 +179,7 @@ Independent on/off operation of each device is also supported, flexibly adapting
 
 Switching between three RGB lighting effects, enabling/disabling alarm modes, and setting thresholds for temperature-controlled fans.
 
-**Voice Recognition Control:**
+**SPEECH Recognition Control:**
 
 Supports direct control of fans, water pumps, and RGB lights via specific voice commands, achieving a hands-free intelligent interactive experience.
 
