@@ -492,7 +492,7 @@ Code Burning Options
 Effect Display
 ~~~~~~~~~~~~~~
 
-When the ambient light drops to 10% and someone passes by, a buzzer alarm sounds and relevant information is displayed on the serial monitor.
+Pressing any button on the remote control will display the corresponding button in the serial port monitor.
 
 .. image:: _static/COURSE/12.IR.png
    :width: 500
