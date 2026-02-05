@@ -36,43 +36,70 @@ Sample Code
 
 .. code-block:: cpp
 
-   #include <Arduino.h>
-   const int ledPin = 26;   // LED PIN
-   const uint32_t freq = 5000;
-   const uint8_t resolution = 8;  // 0-255
-   void setup() {
-     Serial.begin(115200);
-     Serial.println("breathing light");
+ #include "DHT.h"
 
-     ledcAttach(ledPin, freq, resolution);
-   }
+ // Define pin and sensor type
+ #define DHTPIN 15         // DHT11 data pin connected to GPIO15 of ESP32
+ #define DHTTYPE DHT11     
 
-   void loop() {
-     // Bright
-     for (int duty = 0; duty <= 255; duty++) {
-       ledcWrite(ledPin, duty);
-       delay(10);
-     }
+ DHT dht(DHTPIN, DHTTYPE); // Create DHT object
 
-     // dark
-     for (int duty = 255; duty >= 0; duty--) {
-       ledcWrite(ledPin, duty);
-       delay(10);
-     }
-   }
+ void setup() {
+  Serial.begin(115200);   // Initialize serial communication
+  dht.begin();            // Initialize DHT11 sensor
+  Serial.println("DHT11 Temperature & Humidity Sensor Test Started");
+ }
+
+ void loop() {
+  delay(2000); // Read every two seconds
+
+  float humidity = dht.readHumidity();     // Read humidity
+  float temperature = dht.readTemperature(); // Read temperature (Celsius by default)
+
+  // Check if read was successful
+  if (isnan(humidity) || isnan(temperature)) {
+    Serial.println("Failed to read from DHT11 sensor!");
+    return;
+  }
+
+  // Output data to serial monitor
+  Serial.print("Temperature: ");
+  Serial.print(temperature);
+  Serial.print(" °C  | Humidity: ");
+  Serial.print(humidity);
+  Serial.println(" %");
+ }
 
 ----
 
 Code burning options
 ~~~~~~~~~~~~~~~~~~~~
 
-- You can directly copy the code provided above into the Arduino IDE for burning.
+**You can directly copy the code provided above into the Arduino IDE for burning.**
 
-- Find the **1.BreathingLight.ino** file in the provided folder, download it, open it with the Arduino IDE, and burn the program to the ESP32 development board.
+1. Find the **1.TEMP_HUMI.ino** file in the provided folder, download it, open it with the Arduino IDE, and burn the program to the ESP32 development board.
 
-- Find the **1.BreathingLight.bin** file in the provided folder, download it and use Espressif's official flashing tool to flash the program to the ESP32 development board.
+2. Find the **1.TEMP_HUMI.bin** file in the provided folder, download it and use Espressif's official flashing tool to flash the program to the ESP32 development board.
 
 ----
 
 Effect Display
 ~~~~~~~~~~~~~~
+
+Open the serial port monitor and select 115200 from the baud rate drop-down menu.
+
+.. image:: _static/COURSE/5.dht11.png
+   :width: 600
+   :align: center
+
+.. raw:: html
+
+   <div style="margin-top: 30px;"></div>
+
+The serial monitor will output the current ambient temperature and humidity.
+
+.. image:: _static/COURSE/4.dht11.png
+   :width: 600
+   :align: center
+
+----
