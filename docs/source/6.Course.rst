@@ -20,15 +20,12 @@ The  Kit Course Learning
 Course 1：Temperature and humidity detection
 --------------------------------------------
 
-Component List
-~~~~~~~~~~~~~~
-
 Wiring Diagram
 ~~~~~~~~~~~~~~
 
  - DHT11 Sensor → ESP32 IO15
 
-.. image:: _static/COURSE/1.LED.png
+.. image:: _static/COURSE/1.DHT11.png
    :width: 600
    :align: center
 
