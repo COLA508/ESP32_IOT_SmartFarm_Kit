@@ -872,3 +872,149 @@ RGB displays a variety of lighting effects, which can be switched by sending 1, 
    :align: center
 
 ----
+
+Course 8：Environmental Monitor
+----------------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - DHT11 Sensor → ESP32 IO15
+
+ - Light Sensor → ESP32 IO34
+
+ - waterlevel Sensor → ESP32 IO36
+
+.. image:: _static/COURSE/15.rgb.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+    
+  #include <Wire.h>
+  #include <LiquidCrystal_I2C.h>
+  #include <DHT.h>
+
+  // Pin Definitions
+  #define DHTPIN 15
+  #define LIGHT_PIN 34
+  #define WATER_PIN 36
+  #define DHTTYPE DHT11
+
+  // Initialize LCD (address 0x27, 16 columns, 2 rows)
+  LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+  // Initialize DHT sensor
+  DHT dht(DHTPIN, DHTTYPE);
+
+  void setup() {
+    // Initialize LCD
+    lcd.init();
+    lcd.backlight();
+    
+    // Initialize DHT sensor
+    dht.begin();
+    
+    // Set analog input pins
+    pinMode(LIGHT_PIN, INPUT);
+    pinMode(WATER_PIN, INPUT);
+    
+    // Display initial message
+    lcd.setCursor(0, 0);
+    lcd.print("System Starting");
+    lcd.setCursor(0, 1);
+    lcd.print("Please Wait...");
+    delay(2000);
+    lcd.clear();
+  }
+
+  void loop() {
+    // Read sensor data
+    float temperature = dht.readTemperature();
+    float humidity = dht.readHumidity();
+    int lightLevel = readLightLevel();
+    int waterLevel = readWaterLevel();
+    
+    // Check if temperature and humidity readings are valid
+    if (isnan(temperature) || isnan(humidity)) {
+      // Display error message if sensor fails
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Sensor Error");
+      delay(2000);
+      return;
+    }
+    
+    // Update LCD display
+    updateDisplay(temperature, humidity, lightLevel, waterLevel);
+    
+    delay(2000); // Update every 2 seconds
+  }
+
+  // Read and normalize light level (0-100)
+  int readLightLevel() {
+    int rawValue = analogRead(LIGHT_PIN);
+    int normalizedValue = map(rawValue, 0, 4095, 0, 100);
+    normalizedValue = constrain(normalizedValue, 0, 100);
+    return normalizedValue;
+  }
+
+  // Read and normalize water level (0-100)
+  int readWaterLevel() {
+    int rawValue = analogRead(WATER_PIN);
+    int normalizedValue = map(rawValue, 0, 4095, 0, 100);
+    normalizedValue = constrain(normalizedValue, 0, 100);
+    return normalizedValue;
+  }
+
+  // Update LCD display
+  void updateDisplay(float temp, float humi, int light, int water) {
+    lcd.clear();
+    
+    // First line: Temperature and Humidity
+    lcd.setCursor(0, 0);
+    lcd.print("TEMP:");
+    if (temp < 10) lcd.print("0");
+    lcd.print((int)temp);
+    lcd.print(" HUMI:");
+    if (humi < 10) lcd.print("0");
+    lcd.print((int)humi);
+    
+    // Second line: Light and Water level
+    lcd.setCursor(0, 1);
+    lcd.print("LIGH:");
+    if (light < 10) lcd.print("0");
+    lcd.print(light);
+    lcd.print(" WATE:");
+    if (water < 10) lcd.print("0");
+    lcd.print(water);
+  }
+  
+----
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **8.Environmental_Monitor.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+2.Download the **8.Environmental_Monitor.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+The LCD1602 screen will display real-time information on monitored temperature, humidity, brightness, and water level.
+
+.. image:: _static/COURSE/16.rgb.png
+   :width: 500
+   :align: center
+
+----
