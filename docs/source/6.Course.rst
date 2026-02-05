@@ -72,7 +72,7 @@ Sample Code
 
 ----
 
-Code burning options
+Code Burning Options
 ~~~~~~~~~~~~~~~~~~~~
 
 **You can directly copy the code provided above into the Arduino IDE for burning.**
@@ -156,7 +156,7 @@ Sample Code
 
 ----
 
-Code burning options
+Code Burning Options
 ~~~~~~~~~~~~~~~~~~~~
 
 **You can directly copy the code provided above into the Arduino IDE for burning.**
