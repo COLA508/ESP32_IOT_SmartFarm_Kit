@@ -112,3 +112,69 @@ The serial monitor will output the current ambient temperature and humidity.
    :align: center
 
 ----
+
+Course 2：Brightness Detection
+------------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - Light Sensor → ESP32 IO34
+
+.. image:: _static/COURSE/2.light.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+
+   #include <Arduino.h>
+
+   // Define sensor pin
+   const int lightSensorPin = 34;  // S pin connected to GPIO34 (ADC input)
+
+   void setup() {
+       Serial.begin(115200);
+       delay(1000);
+       Serial.println("Light Sensor Test Started");
+   }
+
+   void loop() {
+       int sensorValue = analogRead(lightSensorPin);
+       float brightnessPercent = sensorValue * 100.0 / 4095.0;
+       Serial.print("ADC Value: ");
+       Serial.print(sensorValue);
+       Serial.print("  |  Brightness: ");
+       Serial.print(brightnessPercent);
+       Serial.println("%");
+       delay(3000);
+   }
+
+----
+
+Code burning options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **2.Brightness.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+
+2.Download the **2.Brightness.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+Open the serial port monitor and set the baud rate to 115200 to continuously read the ambient light intensity data in the serial port.
+
+.. image:: _static/COURSE/7.light.png
+   :width: 800
+   :align: center
+
+----
