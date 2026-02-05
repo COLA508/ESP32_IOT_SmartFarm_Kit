@@ -499,3 +499,108 @@ Pressing any button on the remote control will display the corresponding button 
    :align: center
 
 ----
+
+Course 6：Remote Control Fan
+----------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - IR Receiver Module → ESP32 IO15
+
+.. image:: _static/COURSE/11.IR.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+    
+  #include <IRremote.h>
+
+  // Hardware Definitions
+  #define IR_RECEIVE_PIN 15
+  String lastKey = "";      // Save last key press
+  String currentKey = "";
+
+  // Key Mapping
+  String keyMap(uint32_t code) {
+    switch(code) {
+      case 0x16: return "1";
+      case 0x19: return "2";
+      case 0x0d: return "3";
+      case 0x0c: return "4";
+      case 0x18: return "5";
+      case 0x5e: return "6";
+      case 0x08: return "7";
+      case 0x1c: return "8";
+      case 0x5A: return "9";
+      case 0x52: return "0";
+      case 0x42: return "*";
+      case 0x4A: return "#";
+      case 0x46: return "UP";
+      case 0x15: return "DOWN";
+      case 0x40: return "OK";
+      case 0x44: return "LEFT";
+      case 0x43: return "RIGHT";
+      default: return "";
+    }
+  }
+
+  // Setup
+  void setup() {
+    Serial.begin(115200);
+    Serial.println("ESP32 IR Remote Serial Display");
+    Serial.println("==============================");
+
+    // IR Receiver initialization
+    IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
+    Serial.println("IR Receiver initialized");
+    Serial.println("Waiting for IR signals...");
+    Serial.println();
+  }
+
+  // Main Loop
+  void loop() {
+    // Detect IR signals
+    if (IrReceiver.decode()) {
+      uint32_t code = IrReceiver.decodedIRData.command; // Get command code
+      String key = keyMap(code);
+
+      if (key != "" && key != lastKey) {  // Only update for new keys
+        currentKey = key;
+        lastKey = key;
+        Serial.print("IR Key Pressed: ");
+        Serial.println(currentKey);
+      }
+
+      IrReceiver.resume();  // Prepare for next reception
+    }
+  }
+
+----
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **6.FAN.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+2.Download the **6.FAN.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+Pressing any button on the remote control will display the corresponding button in the serial port monitor.
+
+.. image:: _static/COURSE/12.IR.png
+   :width: 500
+   :align: center
+
+----
