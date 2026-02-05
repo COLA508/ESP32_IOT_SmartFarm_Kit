@@ -98,7 +98,7 @@ Open the serial port monitor and select 115200 from the baud rate drop-down menu
    <div style="margin-top: 30px;"></div>
 
 .. image:: _static/COURSE/6.DHT11.png
-   :width: 800
+   :width: 500
    :align: center
 
 .. raw:: html
@@ -108,7 +108,7 @@ Open the serial port monitor and select 115200 from the baud rate drop-down menu
 The serial monitor will output the current ambient temperature and humidity.
 
 .. image:: _static/COURSE/4.DHT111.png
-   :width: 800
+   :width: 500
    :align: center
 
 ----
@@ -174,7 +174,84 @@ Effect Display
 Open the serial port monitor and set the baud rate to 115200 to continuously read the ambient light intensity data in the serial port.
 
 .. image:: _static/COURSE/7.light.png
+   :width: 500
+   :align: center
+
+----
+
+Course 3：Human Body Detection
+------------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - PIR Sensor → ESP32 IO33
+
+.. image:: _static/COURSE/2.light.png
    :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+
+   #include <Arduino.h>
+
+   // Define PIR sensor pin
+   const int pirPin = 33;  // Signal pin connected to GPIO33
+
+   void setup() {
+       // Initialize serial communication at 115200 baud
+       Serial.begin(115200);
+       delay(1000); // Give time for Serial Monitor to start
+
+       // Set PIR pin as input
+       pinMode(pirPin, INPUT);
+
+       Serial.println("PIR Sensor Test Started");
+   }
+
+   void loop() {
+       // Read PIR sensor digital value
+       int motionDetected = digitalRead(pirPin);
+
+       if (motionDetected == HIGH) {
+           // Motion detected
+           Serial.println("Motion Detected!");
+       } else {
+           // No motion
+           Serial.println("No Motion");
+       }
+
+       // Wait 3000 milliseconds before next reading
+       delay(3000);
+   }
+
+----
+
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **3.Human_Body.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+
+2.Download the **3.Human_Body.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+Open the serial port monitor and set the baud rate to 115200. The serial port will then display whether a human body has been detected.
+
+.. image:: _static/COURSE/8.pir.png
+   :width: 500
    :align: center
 
 ----
