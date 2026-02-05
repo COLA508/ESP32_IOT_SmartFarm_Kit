@@ -191,7 +191,7 @@ Wiring Diagram
 
  - Buzzer Module → ESP32 IO26
 
-.. image:: _static/COURSE/2.light.png
+.. image:: _static/COURSE/3.pir.png
    :width: 800
    :align: center
 
@@ -507,8 +507,9 @@ Wiring Diagram
 ~~~~~~~~~~~~~~
 
  - IR Receiver Module → ESP32 IO15
+ - Motor Fan Module → ESP32 IO27
 
-.. image:: _static/COURSE/11.IR.png
+.. image:: _static/COURSE/13.fan.png
    :width: 800
    :align: center
 
@@ -521,10 +522,14 @@ Sample Code
     
   #include <IRremote.h>
 
-  // Hardware Definitions
+  // Pin Definitions
   #define IR_RECEIVE_PIN 15
-  String lastKey = "";      // Save last key press
-  String currentKey = "";
+  #define FAN_PIN 27
+
+  bool fanOn = false;
+  int fanLevel = 0;
+  String lastKey = "";
+  unsigned long lastKeyTime = 0; // Debounce timer
 
   // Key Mapping
   String keyMap(uint32_t code) {
@@ -532,55 +537,78 @@ Sample Code
       case 0x16: return "1";
       case 0x19: return "2";
       case 0x0d: return "3";
-      case 0x0c: return "4";
-      case 0x18: return "5";
-      case 0x5e: return "6";
-      case 0x08: return "7";
-      case 0x1c: return "8";
-      case 0x5A: return "9";
-      case 0x52: return "0";
-      case 0x42: return "*";
-      case 0x4A: return "#";
-      case 0x46: return "UP";
-      case 0x15: return "DOWN";
       case 0x40: return "OK";
-      case 0x44: return "LEFT";
-      case 0x43: return "RIGHT";
       default: return "";
     }
   }
 
-  // Setup
-  void setup() {
-    Serial.begin(115200);
-    Serial.println("ESP32 IR Remote Serial Display");
-    Serial.println("==============================");
+  // Fan Control Function
+  void setFanLevel(int level, bool on = true){
+    fanOn = on;
+    fanLevel = (fanOn) ? level : 0;
+    int duty = 0;
+    if(fanOn){
+      switch(fanLevel){
+        case 1: duty = 85; break;
+        case 2: duty = 170; break;
+        case 3: duty = 255; break;
+        default: duty = 0;
+      }
+    }
+    analogWrite(FAN_PIN, duty);
+  }
 
-    // IR Receiver initialization
+  // Setup
+  void setup(){
+    Serial.begin(115200);
+    Serial.println("ESP32 Fan Control via IR");
+    Serial.println("========================");
+    Serial.println("Key Functions:");
+    Serial.println("  OK  - Toggle power");
+    Serial.println("  1   - Level 1");
+    Serial.println("  2   - Level 2");
+    Serial.println("  3   - Level 3");
+    Serial.println("========================");
+
+    pinMode(FAN_PIN, OUTPUT);
+    setFanLevel(0, false); // Initially turn off fan
+
+    // IR receiver
     IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
     Serial.println("IR Receiver initialized");
-    Serial.println("Waiting for IR signals...");
+    Serial.println("Ready for IR commands...");
     Serial.println();
   }
 
   // Main Loop
-  void loop() {
-    // Detect IR signals
-    if (IrReceiver.decode()) {
-      uint32_t code = IrReceiver.decodedIRData.command; // Get command code
+  void loop(){
+    if(IrReceiver.decode()){
+      uint32_t code = IrReceiver.decodedIRData.command;
       String key = keyMap(code);
 
-      if (key != "" && key != lastKey) {  // Only update for new keys
-        currentKey = key;
+      if(key != "" && (key != lastKey || millis() - lastKeyTime > 300)){
         lastKey = key;
-        Serial.print("IR Key Pressed: ");
-        Serial.println(currentKey);
+        lastKeyTime = millis();
+
+        if(key == "OK") setFanLevel((fanLevel > 0) ? fanLevel : 1, !fanOn);
+        else if(fanOn){
+          if(key == "1") setFanLevel(1);
+          else if(key == "2") setFanLevel(2);
+          else if(key == "3") setFanLevel(3);
+        }
+
+        Serial.print("IR Key: ");
+        Serial.print(key);
+        Serial.print(" => Fan Level: ");
+        Serial.print(fanLevel);
+        Serial.print(" | Fan State: ");
+        Serial.println(fanOn ? "ON" : "OFF");
       }
 
-      IrReceiver.resume();  // Prepare for next reception
+      IrReceiver.resume();
     }
   }
-
+  
 ----
 
 Code Burning Options
@@ -597,9 +625,9 @@ Code Burning Options
 Effect Display
 ~~~~~~~~~~~~~~
 
-Pressing any button on the remote control will display the corresponding button in the serial port monitor.
+Press the "OK" button on the infrared remote control to start the fan. The default speed is 1. Press the button to increase the speed to 2 or 3, and the airflow will gradually increase. Press the "OK" button again to turn off the fan.
 
-.. image:: _static/COURSE/12.IR.png
+.. image:: _static/COURSE/14.fan.png
    :width: 500
    :align: center
 
