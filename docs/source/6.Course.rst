@@ -9,7 +9,7 @@ The  Kit Course Learning
 
 .. note::
 
-  The following courses all come with sample code. You have two options for flashing the code:
+ The following courses all come with sample code. You have two options for flashing the code:
 
  Option 1: If you choose to flash the code using the Arduino IDE, click here to jump to the Arduino IDE flashing tutorial. :ref:`Arduino IDE burning program`
 
@@ -17,8 +17,8 @@ The  Kit Course Learning
 
 ----
 
-Course 1：Temperature and humidity detection
---------------------------------------------
+Course 1：TEMP_HUMI
+-------------------
 
 Wiring Diagram
 ~~~~~~~~~~~~~~
@@ -98,7 +98,7 @@ Open the serial port monitor and select 115200 from the baud rate drop-down menu
    <div style="margin-top: 30px;"></div>
 
 .. image:: _static/COURSE/6.DHT11.png
-   :width: 1000
+   :width: 800
    :align: center
 
 .. raw:: html
@@ -107,8 +107,8 @@ Open the serial port monitor and select 115200 from the baud rate drop-down menu
 
 The serial monitor will output the current ambient temperature and humidity.
 
-.. image:: _static/COURSE/4.DHT11.png
-   :width: 1000
+.. image:: _static/COURSE/4.DHT111.png
+   :width: 800
    :align: center
 
 ----
