@@ -608,7 +608,7 @@ Sample Code
       IrReceiver.resume();
     }
   }
-  
+
 ----
 
 Code Burning Options
@@ -628,6 +628,246 @@ Effect Display
 Press the "OK" button on the infrared remote control to start the fan. The default speed is 1. Press the button to increase the speed to 2 or 3, and the airflow will gradually increase. Press the "OK" button again to turn off the fan.
 
 .. image:: _static/COURSE/14.fan.png
+   :width: 500
+   :align: center
+
+----
+
+Course 7：Vibrant RGB
+---------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - RGB light strip → ESP32 IO5
+
+.. image:: _static/COURSE/15.rgb.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+    
+  #include <IRremote.h>
+
+  #include <Adafruit_NeoPixel.h>
+
+  // LED Configuration
+  #define LED_PIN     5
+  #define LED_COUNT   8
+  #define BRIGHTNESS  150  // Higher default brightness
+
+  Adafruit_NeoPixel strip(LED_COUNT, LED_PIN, NEO_GRB + NEO_KHZ800);
+
+  // Mode Variables
+  int currentMode = 1;  // Current mode (1-3)
+  unsigned long previousMillis = 0;
+  int hue = 0;
+  int chasePos = 0;
+  int scannerPos = 0;
+  int pulseValue = 0;
+  bool pulseUp = true;
+
+  // Predefined Color Palette
+  uint32_t colorPalette[] = {
+    strip.Color(255, 0, 0),       // Red
+    strip.Color(0, 255, 0),       // Green
+    strip.Color(0, 0, 255),       // Blue
+    strip.Color(255, 255, 0),     // Yellow
+    strip.Color(255, 0, 255),     // Purple
+    strip.Color(0, 255, 255),     // Cyan
+    strip.Color(255, 165, 0),     // Orange
+    strip.Color(255, 20, 147),    // Deep Pink
+    strip.Color(138, 43, 226),    // Blue Violet
+    strip.Color(50, 205, 50),     // Lime Green
+    strip.Color(255, 215, 0),     // Gold
+    strip.Color(220, 20, 60),     // Crimson
+    strip.Color(30, 144, 255),    // Dodger Blue
+    strip.Color(255, 105, 180),   // Hot Pink
+    strip.Color(0, 255, 127),     // Spring Green
+    strip.Color(148, 0, 211)      // Dark Violet
+  };
+  int colorCount = sizeof(colorPalette) / sizeof(colorPalette[0]);
+
+  void setup() {
+    Serial.begin(115200);
+    Serial.println("\n============= RGB LED Strip Controller =============");
+    Serial.println("Mode 1: Rainbow Chase");
+    Serial.println("Mode 2: Color Marquee");
+    Serial.println("Mode 3: Cosmic Pulse");
+    Serial.println("====================================================");
+    Serial.println("Send 1, 2, or 3 via serial to change modes");
+    Serial.println("====================================================");
+    
+    strip.begin();
+    strip.setBrightness(BRIGHTNESS);
+    strip.clear();
+    strip.show();
+    
+    Serial.print("Current Mode: ");
+    Serial.println(currentMode);
+  }
+
+  void loop() {
+    unsigned long currentMillis = millis();
+    
+    // Handle serial commands
+    if (Serial.available() > 0) {
+      handleSerialCommand();
+    }
+    
+    // Execute effects based on current mode
+    switch(currentMode) {
+      case 1:
+        if (currentMillis - previousMillis >= 50) {
+          rainbowChase();
+          previousMillis = currentMillis;
+        }
+        break;
+        
+      case 2:
+        if (currentMillis - previousMillis >= 100) {
+          colorMarquee();
+          previousMillis = currentMillis;
+        }
+        break;
+        
+      case 3:
+        if (currentMillis - previousMillis >= 30) {
+          cosmicPulse();
+          previousMillis = currentMillis;
+        }
+        break;
+    }
+  }
+
+  // Serial Command Handler
+  void handleSerialCommand() {
+    char command = Serial.read();
+    
+    if (command == '1' || command == '2' || command == '3') {
+      currentMode = command - '0';
+      strip.clear();
+      strip.show();
+      Serial.print("Switched to Mode ");
+      Serial.println(currentMode);
+    }
+  }
+
+  // Mode 1: Rainbow Chase Effect
+  void rainbowChase() {
+    strip.clear();
+    
+    // Create rainbow chase effect
+    for(int i = 0; i < strip.numPixels(); i++) {
+      int pixelHue = (hue + i * 40 + chasePos * 20) % 65536;
+      uint32_t color = strip.gamma32(strip.ColorHSV(pixelHue, 255, 255));
+      
+      strip.setPixelColor(i, color);
+      
+      // Add trailing effect
+      for(int j = 1; j <= 2; j++) {
+        int trailPos = (i - j + strip.numPixels()) % strip.numPixels();
+        int trailHue = (pixelHue - j * 2000 + 65536) % 65536;
+        uint32_t trailColor = strip.gamma32(strip.ColorHSV(trailHue, 255, 200 - j * 50));
+        strip.setPixelColor(trailPos, trailColor);
+      }
+    }
+    
+    strip.show();
+    
+    chasePos = (chasePos + 1) % strip.numPixels();
+    hue = (hue + 500) % 65536;
+  }
+
+  // Mode 2: Color Marquee Effect
+  void colorMarquee() {
+    static int colorIndex = 0;
+    
+    for(int i = 0; i < strip.numPixels(); i++) {
+      int idx = (colorIndex + i * 2 + chasePos) % colorCount;
+      strip.setPixelColor(i, colorPalette[idx]);
+    }
+    
+    strip.show();
+    
+    chasePos = (chasePos + 1) % strip.numPixels();
+    colorIndex = (colorIndex + 1) % colorCount;
+  }
+
+  // Mode 3: Cosmic Pulse Effect
+  void cosmicPulse() {
+    // Update pulse value
+    if (pulseUp) {
+      pulseValue += 4;
+      if (pulseValue >= 255) {
+        pulseValue = 255;
+        pulseUp = false;
+      }
+    } else {
+      pulseValue -= 2;
+      if (pulseValue <= 30) {
+        pulseValue = 30;
+        pulseUp = true;
+      }
+    }
+    
+    // Main pulse color (blue-purple tones)
+    uint8_t mainR = (uint8_t)(pulseValue * 0.3 + 50);
+    uint8_t mainG = (uint8_t)(pulseValue * 0.1 + 20);
+    uint8_t mainB = (uint8_t)(pulseValue * 0.8 + 50);
+    
+    // Create pulse wave effect
+    for(int i = 0; i < strip.numPixels(); i++) {
+      float phase = (i + scannerPos) * 0.5;
+      float wave = sin(pulseValue * 0.02 + phase) * 0.5 + 0.5;
+      
+      uint8_t r = (uint8_t)(mainR * wave + random(0, 10));
+      uint8_t g = (uint8_t)(mainG * wave + random(0, 5));
+      uint8_t b = (uint8_t)(mainB * (0.7 + 0.3 * sin(pulseValue * 0.03 + i * 0.3)) + random(0, 15));
+      
+      // Add star twinkle effect
+      if (random(0, 1000) < 5) {
+        r = min(255, (int)r + 100);
+        g = min(255, (int)g + 100);
+        b = min(255, (int)b + 100);
+      }
+      
+      strip.setPixelColor(i, strip.Color(r, g, b));
+    }
+    
+    // Add scanning highlight
+    int highlight = scannerPos % strip.numPixels();
+    strip.setPixelColor(highlight, strip.Color(200, 200, 255));
+    
+    strip.show();
+    
+    scannerPos = (scannerPos + 1) % (strip.numPixels() * 2);
+  }
+  
+----
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **7.RGB.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board, or directly copy the complete code above into the Arduino IDE for programming.
+
+2.Download the **7.RGB.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+RGB displays a variety of lighting effects, which can be switched by sending 1, 2, or 3 through the serial port.
+
+.. image:: _static/COURSE/16.rgb.png
    :width: 500
    :align: center
 
