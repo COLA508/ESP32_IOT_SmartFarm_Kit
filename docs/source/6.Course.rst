@@ -1298,8 +1298,4 @@ Effect Display
 
 The relay activates when the water level is below 10%, and the water pump starts pumping water. The relay deactivates when the water level is above 70%, and the water pump stops pumping water.
 
-.. image:: _static/COURSE/20.SPEECH.png
-   :width: 600
-   :align: center
-
 ----
