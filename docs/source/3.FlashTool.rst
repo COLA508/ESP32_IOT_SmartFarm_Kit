@@ -90,6 +90,10 @@ Unzip "Flash Download Tool". The folder contains the following files. Double-cli
    
    - The storage path is: Code and Library — Code — 0.Smart_Farm — 0.Smart_Farm.bin
 
+ .. image:: _static/install/11.code.png
+   :width: 800
+   :align: center
+
 ----
 
 3.4 Set the parameters as shown in the picture: SPI SPEED select 80MHz, SPI MODE select DIO, COM select the serial port actually connected to the computer, and BAUD set to 921600.
