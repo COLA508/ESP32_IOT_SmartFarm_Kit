@@ -1036,7 +1036,8 @@ Sample Code
 ~~~~~~~~~~~
 
 .. code-block:: cpp
-    #include <Arduino.h>
+
+  #include <Arduino.h>
 
   // FAN configuration
   #define FAN_PIN 27
@@ -1155,7 +1156,7 @@ Code Burning Options
 Effect Display
 ~~~~~~~~~~~~~~
 
-Say "Hi Lola" to the voice module to wake it up, then use the command "turn on the fan" to turn the fan on or "turn off the fan" to turn it off.
+Say **"Hi Lola"** to the voice module to wake it up, then use the command **"turn on the fan"** to turn the fan on or **"turn off the fan"** to turn it off.
 
 .. image:: _static/COURSE/20.SPEECH.png
    :width: 600
