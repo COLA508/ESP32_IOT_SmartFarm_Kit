@@ -1174,7 +1174,7 @@ Wiring Diagram
 
  - Relay Module → ESP32 IO23
 
- - water pump → Relay Module V+ V-
+ - Water Pump → Relay Module V+ V-
 
 .. image:: _static/COURSE/19.SPEECH.png
    :width: 800
