@@ -1015,3 +1015,150 @@ The LCD1602 screen will display real-time information on monitored temperature, 
    :align: center
 
 ----
+
+Course 9：Voice Controlled Fan
+------------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - Speech Recognition Module → ESP32 IO16/17
+
+ - Motor Fan Module → ESP32 IO27
+
+.. image:: _static/COURSE/19.SPEECH.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+    #include <Arduino.h>
+
+  // FAN configuration
+  #define FAN_PIN 27
+
+  // Voice recognition
+  #define VOICE_RX_PIN 16
+  #define VOICE_TX_PIN 17
+  #define VOICE_HEADER 0xAA          // Packet header
+  #define VOICE_FOOTER 0xBB          // Packet footer
+  #define VOICE_PACKET_LENGTH 3      // Packet length
+  #define VOICE_KEY_FAN_ON 0x07      // Fan on command
+  #define VOICE_KEY_FAN_OFF 0x08     // Fan off command
+
+  HardwareSerial VoiceSerial(2);
+
+  // Voice protocol parsing variables
+  uint8_t voiceBuffer[VOICE_PACKET_LENGTH];
+  int voiceBufferIndex = 0;
+  bool voiceReceiving = false;
+  unsigned long lastVoiceByteTime = 0;
+  const unsigned long VOICE_TIMEOUT = 100; // Byte timeout in ms
+
+  void setFanValue(int val) {
+    digitalWrite(FAN_PIN, val);
+  }
+
+  int getFanValue() {
+    return digitalRead(FAN_PIN);
+  }
+
+  // Validate command
+  bool isValidVoiceCommand(uint8_t command) {
+    return (command == VOICE_KEY_FAN_ON || command == VOICE_KEY_FAN_OFF);
+  }
+
+  // Process voice command
+  void processVoiceCommand(uint8_t keyword) {
+    if (keyword == VOICE_KEY_FAN_ON) {
+      setFanValue(HIGH);
+      Serial.println("Voice Command: FAN ON");
+    } else if (keyword == VOICE_KEY_FAN_OFF) {
+      setFanValue(LOW);
+      Serial.println("Voice Command: FAN OFF");
+    }
+  }
+
+  // Voice protocol parser
+  void voiceSerialLoop() {
+    // Check timeout
+    if (voiceReceiving && millis() - lastVoiceByteTime > VOICE_TIMEOUT) {
+      voiceBufferIndex = 0;
+      voiceReceiving = false;
+    }
+    
+    while (VoiceSerial.available() > 0) {
+      uint8_t data = VoiceSerial.read();
+      lastVoiceByteTime = millis();
+      
+      if (!voiceReceiving) {
+        if (data == VOICE_HEADER) {
+          voiceReceiving = true;
+          voiceBufferIndex = 0;
+          voiceBuffer[voiceBufferIndex++] = data;
+        }
+        continue;
+      }
+      
+      if (voiceBufferIndex < VOICE_PACKET_LENGTH) {
+        voiceBuffer[voiceBufferIndex++] = data;
+        
+        if (voiceBufferIndex == VOICE_PACKET_LENGTH) {
+          if (voiceBuffer[0] == VOICE_HEADER && voiceBuffer[2] == VOICE_FOOTER) {
+            uint8_t keyword = voiceBuffer[1];
+            if (isValidVoiceCommand(keyword)) {
+              processVoiceCommand(keyword);
+            } else {
+              Serial.print("Invalid command: 0x");
+              Serial.println(keyword, HEX);
+            }
+          }
+          voiceReceiving = false;
+          voiceBufferIndex = 0;
+        }
+      } else {
+        voiceReceiving = false;
+        voiceBufferIndex = 0;
+      }
+    }
+  }
+
+  void setup() {
+    Serial.begin(115200);
+    VoiceSerial.begin(115200, SERIAL_8N1, VOICE_TX_PIN, VOICE_RX_PIN);
+    pinMode(FAN_PIN, OUTPUT);
+    setFanValue(LOW);  // 
+    Serial.println("Voice-controlled FAN system started");
+  }
+
+  void loop() {
+    voiceSerialLoop();  // Handle voice commands
+  }
+
+----
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **9.Voice_Fan.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board.
+
+2.Download the **9.Voice_Fan.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+Say "Hi Lola" to the voice module to wake it up, then use the command "turn on the fan" to turn the fan on or "turn off the fan" to turn it off.
+
+.. image:: _static/COURSE/20.SPEECH.png
+   :width: 600
+   :align: center
+
+----
