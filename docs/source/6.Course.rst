@@ -1163,3 +1163,143 @@ Say **"Hi Lola"** to the voice module to wake it up, then use the command **"tur
    :align: center
 
 ----
+
+Course 10：Automatic watering
+-----------------------------
+
+Wiring Diagram
+~~~~~~~~~~~~~~
+
+ - Water Level Sensor → ESP32 IO36
+
+ - Relay Module → ESP32 IO23
+
+ - water pump → Relay Module V+ V-
+
+.. image:: _static/COURSE/19.SPEECH.png
+   :width: 800
+   :align: center
+
+----
+
+Sample Code
+~~~~~~~~~~~
+
+.. code-block:: cpp
+
+  const int WATER_SENSOR_PIN = 36;  // Water level sensor
+  const int RELAY_PIN = 23;         // Relay module control pin
+  
+  // Constants
+  const int LOW_WATER_THRESHOLD = 10;  // Start pumping below this level
+  const int HIGH_WATER_THRESHOLD = 70; // Stop pumping above this level
+  const unsigned long CHECK_INTERVAL = 1000;  // Check interval (ms)
+  
+  // Variables
+  int waterLevel = 0;
+  bool pumpRunning = false;
+  unsigned long lastCheckTime = 0;
+  
+  void setup() {
+    // Initialize serial monitor for debugging
+    Serial.begin(115200);
+    Serial.println("Water Pump Control System");
+    Serial.println("==========================");
+    Serial.println("Water Level Range: 0-100%");
+    Serial.println("Pump ON when level < 10%");
+    Serial.println("Pump OFF when level > 70%");
+    Serial.println("Relay: HIGH level activates");
+    Serial.println("==========================");
+    
+    // Initialize pins
+    pinMode(RELAY_PIN, OUTPUT);
+    digitalWrite(RELAY_PIN, LOW);  // Default OFF (LOW for HIGH-active relay)
+    
+    pinMode(WATER_SENSOR_PIN, INPUT);
+    
+    Serial.println("System Initialized");
+    Serial.println("Waiting for water level data...");
+    Serial.println();
+  }
+  
+  void loop() {
+    unsigned long currentTime = millis();
+    
+    // Check water level at regular intervals
+    if (currentTime - lastCheckTime >= CHECK_INTERVAL) {
+      lastCheckTime = currentTime;
+      
+      // Read and normalize water level (0-100)
+      waterLevel = readWaterLevel();
+      
+      // Display current status
+      Serial.print("Water Level: ");
+      Serial.print(waterLevel);
+      Serial.print("% | Pump: ");
+      Serial.println(pumpRunning ? "ON" : "OFF");
+      
+      // Pump control logic
+      if (!pumpRunning && waterLevel < LOW_WATER_THRESHOLD) {
+        // Start the pump if water level is too low
+        startPump();
+        Serial.println("Pump STARTED - Water level too low");
+      }
+      
+      if (pumpRunning && waterLevel > HIGH_WATER_THRESHOLD) {
+        // Stop the pump if water level is high enough
+        stopPump();
+        Serial.println("Pump STOPPED - Water level reached");
+      }
+    }
+  }
+  
+  // Read and normalize water level (0-100)
+  int readWaterLevel() {
+    int rawValue = analogRead(WATER_SENSOR_PIN);
+    // Normalize to 0-100 range
+    int normalizedValue = map(rawValue, 0, 4095, 0, 100);
+    normalizedValue = constrain(normalizedValue, 0, 100);
+    return normalizedValue;
+  }
+  
+  // Start the pump
+  void startPump() {
+    pumpRunning = true;
+    digitalWrite(RELAY_PIN, HIGH);  // Activate relay (HIGH for HIGH-active relay)
+  }
+  
+  // Stop the pump
+  void stopPump() {
+    pumpRunning = false;
+    digitalWrite(RELAY_PIN, LOW);  // Deactivate relay (LOW for HIGH-active relay)
+  }
+  
+  // Emergency stop function
+  void emergencyStop() {
+    stopPump();
+    Serial.println("EMERGENCY STOP - Pump disabled");
+  }
+
+----
+
+Code Burning Options
+~~~~~~~~~~~~~~~~~~~~
+
+**You can directly copy the code provided above into the Arduino IDE for burning.**
+
+1.Download the **10.watering.ino** file from the provided resources, open it with the Arduino IDE and upload it to the ESP32 development board.
+
+2.Download the **10.watering.bin** firmware file from the provided resources and flash it to the ESP32 development board using the flash_download_tool.
+
+----
+
+Effect Display
+~~~~~~~~~~~~~~
+
+The relay activates when the water level is below 10%, and the water pump starts pumping water. The relay deactivates when the water level is above 70%, and the water pump stops pumping water.
+
+.. image:: _static/COURSE/20.SPEECH.png
+   :width: 600
+   :align: center
+
+----
